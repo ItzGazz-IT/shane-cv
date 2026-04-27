@@ -97,7 +97,7 @@ export default function Contact() {
             </svg>
             Download Full CV (PDF)
           </a>
-          <p className="ct-dl-note">Johannesburg, South Africa · Available immediately</p>
+          <p className="ct-dl-note">Barbourville, KY · Open to Fayetteville NC or Barbourville KY · Available immediately</p>
         </div>
       </div>
 

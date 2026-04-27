@@ -10,12 +10,12 @@ const degrees = [
     note: 'Scouted by Gulf United FC in South Africa — relocated to the USA to study and play Division I soccer. Completed degree Cum Laude with a 3.72 GPA.',
   },
   {
-    degree: 'Bachelor of Science: Health Sciences',
+    degree: 'Bachelor of Science: Health Sciences (Incomplete)',
     school: 'University of Johannesburg',
     location: 'Johannesburg, South Africa',
-    period: '2022 – 2024',
-    tags: ['Health Sciences', 'Exercise & Sport Science'],
-    note: '',
+    period: '2022 – 2023',
+    tags: ['Health Sciences', 'Exercise & Sport Science', 'Transferred to USA'],
+    note: 'Began studies at UJ before being scouted by Gulf United FC and transferring to Union Commonwealth University in the USA to continue studies and play Division I soccer.',
   },
   {
     degree: 'High School Diploma (Matric)',

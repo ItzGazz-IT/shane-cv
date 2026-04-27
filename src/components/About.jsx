@@ -32,15 +32,16 @@ export default function About() {
             </h2>
             <p className="about-body">
               Organised, dependable and driven — Shane is a Cum Laude Exercise Science graduate
-              (3.72 GPA) who was scouted in South Africa by Gulf United FC and went on to
-              study and play First Team soccer at Union Commonwealth University in the USA,
-              earning the Dean's List twice while excelling in sport, work and academics simultaneously.
+              (3.72 GPA) who was scouted in South Africa by Gulf United FC and relocated to
+              Barbourville, Kentucky to study and play First Team soccer at Union Commonwealth
+              University, earning the Dean's List twice while excelling in sport, work and
+              academics simultaneously.
             </p>
             <p className="about-body" style={{ marginTop: '18px' }}>
-              Now back home in Johannesburg and open to all opportunities. Shane brings a
-              rare combination of competitive discipline, genuine enthusiasm, strong people
-              skills and the proven ability to thrive under pressure. Available immediately
-              and ready to make an impact.
+              Currently based in Barbourville, KY and actively looking for opportunities in
+              Fayetteville, NC or Barbourville, KY. Shane brings competitive discipline,
+              genuine enthusiasm, strong people skills and the proven ability to thrive under
+              pressure. Available immediately and ready to make an impact.
             </p>
             <div className="about-tags">
               {['Competitive', 'Fast Learner', 'Reliable', 'Team Player', 'Good Leader', 'Adaptable'].map(t => (

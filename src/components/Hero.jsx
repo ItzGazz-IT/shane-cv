@@ -47,8 +47,8 @@ export default function Hero() {
           </p>
 
           <p className="hero-tagline">
-            Motivated and dependable professional eager to contribute,
-            grow and make a real difference — based in Johannesburg, South Africa.
+            Cum Laude graduate based in Barbourville, KY — open to roles
+            in Fayetteville NC or Barbourville KY. Available immediately.
           </p>
 
           <div className="hero-actions">
@@ -83,8 +83,8 @@ export default function Hero() {
           </div>
           <div className="hero-photo-ring" aria-hidden="true" />
           <div className="hero-float-tag">
-            <span>JHB</span>
-            <small>Johannesburg</small>
+            <span>KY</span>
+            <small>Barbourville, USA</small>
           </div>
           <div className="hero-pill hero-pill--1">Motivated</div>
           <div className="hero-pill hero-pill--2">Available</div>
