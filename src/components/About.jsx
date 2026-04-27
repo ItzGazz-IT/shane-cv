@@ -31,14 +31,13 @@ export default function About() {
               <span style={{ color: 'var(--accent)' }}>Proven.</span>
             </h2>
             <p className="about-body">
-              Shane is a Cum Laude Exercise Science graduate (3.72 GPA) who was scouted in South Africa
-              by Gulf United FC — he relocated to Barbourville, Kentucky, earned First Team soccer honours
+              I'm a Cum Laude Exercise Science graduate (3.72 GPA). I was scouted in South Africa
+              by Gulf United FC — I relocated to Barbourville, Kentucky, earned First Team soccer honours
               at Union Commonwealth University and made the Dean's List twice, all while working and studying.
             </p>
             <p className="about-body" style={{ marginTop: '18px' }}>
-              Currently based in Barbourville, KY. Open to roles in Fayetteville, NC or Barbourville, KY.
-              Brings competitive discipline, leadership and genuine hustle to every environment.
-              Available immediately.
+              I'm currently based in Barbourville, KY and available immediately.
+              I bring competitive discipline, leadership and genuine hustle to every environment I'm part of.
             </p>
             <div className="about-tags">
               {['Competitive', 'Fast Learner', 'Reliable', 'Team Player', 'Good Leader', 'Adaptable'].map(t => (

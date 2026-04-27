@@ -20,8 +20,8 @@ export default function Contact() {
         <div className="ct-layout">
           <div className="ct-info">
             <p className="ct-body">
-              Shane is available immediately and open to roles in
-              Fayetteville, NC or Barbourville, KY. Reach out via any channel below.
+              I'm available immediately and based in Barbourville, KY.
+              Reach out via any channel below — I'd love to connect.
             </p>
 
             <div className="ct-links">
@@ -81,7 +81,7 @@ export default function Contact() {
             </a>
 
             <p className="ct-note">
-              Barbourville, KY · Fayetteville NC or Barbourville KY · Available now
+              Barbourville, KY · Available immediately
             </p>
           </div>
         </div>

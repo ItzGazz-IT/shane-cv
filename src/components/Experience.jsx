@@ -8,9 +8,9 @@ const jobs = [
     period: '2024 – 2025',
     active: true,
     bullets: [
-      'Supervised and managed student staff within campus operations.',
-      'Coordinated daily schedules, resolved issues and maintained team performance.',
-      'Point of contact between students and management.',
+      'I supervised and managed student staff within campus operations.',
+      'I coordinated daily schedules, resolved issues and maintained team performance.',
+      'I was the point of contact between students and management.',
     ],
   },
   {
@@ -20,8 +20,8 @@ const jobs = [
     period: '2024 – 2025',
     active: false,
     bullets: [
-      'Ran the Silver Sneaker community fitness programme as degree internship.',
-      'Designed and led group exercise sessions for senior participants.',
+      'I ran the Silver Sneaker community fitness programme as part of my degree internship.',
+      'I designed and led group exercise sessions for senior participants.',
     ],
   },
   {
@@ -31,8 +31,8 @@ const jobs = [
     period: '2024 – 2025',
     active: false,
     bullets: [
-      'Worked across all cafeteria stations: serving, food prep and the kitchen.',
-      'Transferred to campus Starbucks — zero complaints throughout.',
+      'I worked across all cafeteria stations: serving, food prep and the kitchen.',
+      'I transferred to the campus Starbucks — zero complaints throughout.',
     ],
   },
   {
@@ -42,8 +42,8 @@ const jobs = [
     period: '2023 – 2024',
     active: false,
     bullets: [
-      'Taught full classes independently when the lead teacher was unavailable.',
-      'Assisted with admin, stock taking and setting assessments.',
+      'I taught full classes independently when the lead teacher was unavailable.',
+      'I assisted with admin, stock taking and setting assessments.',
     ],
   },
   {
@@ -53,8 +53,8 @@ const jobs = [
     period: '2023 – Present',
     active: false,
     bullets: [
-      'Founded and run a football training academy with weekly Saturday sessions.',
-      'Coach and mentor children aged 8–13.',
+      'I founded and run a football training academy with weekly Saturday sessions.',
+      'I coach and mentor children aged 8–13.',
     ],
   },
   {
@@ -63,7 +63,7 @@ const jobs = [
     location: 'Johannesburg',
     period: 'Jan – Nov 2022',
     active: false,
-    bullets: ['Fundraising events — public engagement, ticket sales, cash handling.'],
+    bullets: ['I helped with fundraising events — public engagement, ticket sales and cash handling.'],
   },
   {
     title: 'Office Assistant',
@@ -71,7 +71,7 @@ const jobs = [
     location: 'Johannesburg',
     period: 'Mar – Dec 2018',
     active: false,
-    bullets: ['Administrative tasks within a corporate office environment.'],
+    bullets: ['I handled administrative tasks within a corporate office environment.'],
   },
   {
     title: 'Referee',
@@ -79,7 +79,7 @@ const jobs = [
     location: 'Johannesburg',
     period: 'Feb – Nov 2014',
     active: false,
-    bullets: ['Enforced regulations, promoted sportsmanship, inspected equipment.'],
+    bullets: ['I enforced regulations, promoted sportsmanship and inspected equipment.'],
   },
 ]
 

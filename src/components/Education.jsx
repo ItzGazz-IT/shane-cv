@@ -7,7 +7,7 @@ const degrees = [
     location: 'Kentucky, USA',
     period: '2024 – 2025',
     tags: ['Exercise Science', 'Cum Laude', '3.72 GPA', "Dean's List × 2", 'First Team Soccer', 'Silver Sneaker Internship'],
-    note: 'Scouted by Gulf United FC in South Africa — relocated to the USA to study and play Division I soccer. Completed degree Cum Laude with a 3.72 GPA.',
+    note: 'I was scouted by Gulf United FC in South Africa — I relocated to the USA to study and play Division I soccer. I completed my degree Cum Laude with a 3.72 GPA.',
   },
   {
     degree: 'BSc: Health Sciences (Incomplete – Transferred)',
@@ -15,7 +15,7 @@ const degrees = [
     location: 'Johannesburg, South Africa',
     period: '2022 – 2023',
     tags: ['Health Sciences', 'Exercise & Sport Science', 'Transferred to USA'],
-    note: 'Began studies at UJ before being scouted by Gulf United FC and transferring to Union Commonwealth University.',
+    note: 'I began my studies at UJ before being scouted by Gulf United FC and transferring to Union Commonwealth University.',
   },
   {
     degree: 'High School Diploma (Matric)',

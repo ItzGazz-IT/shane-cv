@@ -51,8 +51,7 @@ export default function Hero() {
           </div>
 
           <p className="hero-tagline">
-            Cum Laude graduate. First Team soccer athlete. Open to roles in
-            Fayetteville, NC or Barbourville, KY.
+            Cum Laude graduate. First Team soccer athlete. Based in Barbourville, KY — available immediately.
           </p>
 
           <div className="hero-actions">
