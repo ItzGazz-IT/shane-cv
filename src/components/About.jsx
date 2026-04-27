@@ -1,10 +1,10 @@
 import { useScrollReveal, useCountUp } from '../hooks/useAnimations'
 
 const STATS = [
-  { value: 100, suffix: '%', label: 'Commitment to Every Role' },
-  { value: 3,   suffix: '+', label: 'Industries Experienced'   },
-  { value: 5,   suffix: '+', label: 'Key Skills Developed'     },
-  { value: 1,   suffix: '',  label: 'Goal: Your Next Great Hire'},
+  { value: 3,   suffix: '.72', label: 'GPA · Cum Laude Graduate' },
+  { value: 2,   suffix: '',   label: 'University Degrees'        },
+  { value: 2,   suffix: '×',  label: "Dean's List Award"         },
+  { value: 8,   suffix: '+',  label: 'Roles & Experiences'       },
 ]
 
 function StatCard({ value, suffix, label, active }) {
@@ -31,17 +31,19 @@ export default function About() {
               <em style={{ fontStyle: 'italic', color: 'var(--emerald-500)' }}>a hunger to grow</em>
             </h2>
             <p className="about-body">
-              Enthusiastic and dependable individual who brings energy, reliability and a
-              positive attitude to every environment. With a strong work ethic and a willingness
-              to learn, Shane adapts quickly and delivers results.
+              Organised, dependable and driven — Shane is a Cum Laude Exercise Science graduate
+              (3.72 GPA) who was scouted in South Africa by Gulf United FC and went on to
+              study and play First Team soccer at Union Commonwealth University in the USA,
+              earning the Dean's List twice while excelling in sport, work and academics simultaneously.
             </p>
             <p className="about-body" style={{ marginTop: '18px' }}>
-              Currently exploring new career opportunities and committed to finding a role
-              where hard work, accountability and genuine effort are valued. Available
-              immediately and eager to contribute.
+              Now back home in Johannesburg and open to all opportunities. Shane brings a
+              rare combination of competitive discipline, genuine enthusiasm, strong people
+              skills and the proven ability to thrive under pressure. Available immediately
+              and ready to make an impact.
             </p>
             <div className="about-tags">
-              {['Hard Working', 'Reliable', 'Fast Learner', 'Team Player', 'Problem Solver', 'Adaptable'].map(t => (
+              {['Competitive', 'Fast Learner', 'Reliable', 'Team Player', 'Good Leader', 'Adaptable'].map(t => (
                 <span key={t} className="tag">{t}</span>
               ))}
             </div>

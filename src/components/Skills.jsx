@@ -1,20 +1,20 @@
 import { useScrollReveal } from '../hooks/useAnimations'
 
 const techSkills = [
-  { name: 'Communication',   level: 90 },
-  { name: 'Microsoft Office', level: 80 },
-  { name: 'Problem Solving', level: 88 },
-  { name: 'Customer Service',level: 85 },
-  { name: 'Data Entry',      level: 78 },
+  { name: 'Sport & Coaching',    level: 95 },
+  { name: 'Leadership',          level: 90 },
+  { name: 'Communication',       level: 88 },
+  { name: 'Customer Service',    level: 85 },
+  { name: 'Computer Skills',     level: 72 },
 ]
 
 const coreSkills = [
-  'Attention to Detail',
-  'Time Management',
-  'Teamwork',
-  'Adaptability',
-  'Work Ethic',
+  'Competitive Drive',
+  'Fast Learner',
+  'Team Worker',
   'Reliability',
+  'Adaptability',
+  'Attention to Detail',
 ]
 
 const languages = [

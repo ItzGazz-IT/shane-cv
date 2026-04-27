@@ -1,10 +1,10 @@
 import { useEffect, useState } from 'react'
 
 const roles = [
-  'Open to Opportunities',
-  'Fast Learner & Hard Worker',
-  'Detail-Oriented Professional',
-  'Ready to Make an Impact',
+  'Exercise Science Graduate',
+  'Football Coach & Mentor',
+  'Cum Laude · 3.72 GPA',
+  'Open to New Opportunities',
 ]
 
 export default function Hero() {

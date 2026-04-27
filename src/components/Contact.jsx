@@ -9,7 +9,7 @@ export default function Contact() {
   })
 
   const copyEmail = () => {
-    navigator.clipboard.writeText('update@email.com')
+    navigator.clipboard.writeText('shanevda6@gmail.com')
     setCopied(true)
     setTimeout(() => setCopied(false), 2400)
   }
@@ -17,9 +17,9 @@ export default function Contact() {
   const actions = [
     {
       label: 'Send an Email',
-      sub: 'update@email.com',
+      sub: 'shanevda6@gmail.com',
       cta: 'Open email client →',
-      href: 'mailto:update@email.com',
+      href: 'mailto:shanevda6@gmail.com',
       accent: 'var(--emerald-500)',
       icon: (
         <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
@@ -30,9 +30,9 @@ export default function Contact() {
     },
     {
       label: 'Call or SMS',
-      sub: '+27 00 000 0000',
+      sub: '+27 79 902 9015',
       cta: 'Tap to call →',
-      href: 'tel:+27000000000',
+      href: 'tel:+27799029015',
       accent: 'var(--charcoal)',
       icon: (
         <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
@@ -42,9 +42,9 @@ export default function Contact() {
     },
     {
       label: 'WhatsApp',
-      sub: '+27 00 000 0000',
+      sub: '+27 79 902 9015',
       cta: 'Message on WhatsApp →',
-      href: 'https://wa.me/27000000000?text=Hi%20Shane%2C%20I%20saw%20your%20CV%20and%20would%20like%20to%20connect.',
+      href: 'https://wa.me/27799029015?text=Hi%20Shane%2C%20I%20saw%20your%20CV%20and%20would%20like%20to%20connect.',
       accent: '#25d366',
       icon: (
         <svg width="28" height="28" viewBox="0 0 32 32" fill="#25d366">
@@ -79,7 +79,7 @@ export default function Contact() {
         </div>
 
         <div className="ct-copy">
-          <span className="ct-copy-text">update@email.com</span>
+          <span className="ct-copy-text">shanevda6@gmail.com</span>
           <button className={`ct-copy-btn${copied ? ' ct-copy-btn--done' : ''}`} onClick={copyEmail}>
             {copied
               ? (<><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Copied!</>)

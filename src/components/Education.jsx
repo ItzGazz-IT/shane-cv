@@ -1,9 +1,34 @@
 import { useScrollReveal } from '../hooks/useAnimations'
 
+const degrees = [
+  {
+    degree: 'Bachelor of Exercise Science',
+    school: 'Union Commonwealth University',
+    location: 'Kentucky, USA',
+    period: '2024 – 2025',
+    tags: ['Exercise Science', 'Cum Laude', '3.72 GPA', "Dean's List × 2", 'First Team Soccer', 'Silver Sneaker Internship'],
+    note: 'Scouted by Gulf United FC in South Africa — relocated to the USA to study and play Division I soccer. Completed degree Cum Laude with a 3.72 GPA.',
+  },
+  {
+    degree: 'Bachelor of Science: Health Sciences',
+    school: 'University of Johannesburg',
+    location: 'Johannesburg, South Africa',
+    period: '2022 – 2024',
+    tags: ['Health Sciences', 'Exercise & Sport Science'],
+    note: '',
+  },
+  {
+    degree: 'High School Diploma (Matric)',
+    school: 'Boksburg High School',
+    location: 'Boksburg, South Africa',
+    period: '2017 – 2021',
+    tags: ['3 Matric Distinctions', 'Soccer Captain', 'Cricket Captain', 'School Prefect', 'Eastern Gauteng Soccer'],
+    note: '',
+  },
+]
+
 export default function Education() {
   const [sectionRef, visible] = useScrollReveal({ threshold: 0.1 })
-
-  const tags = ['Update', 'With', 'Shane\'s', 'Actual', 'Subjects']
 
   return (
     <section id="education" ref={sectionRef} className="section">
@@ -11,25 +36,34 @@ export default function Education() {
         <span className="label">Academic</span>
         <h2 className="section-title">Education</h2>
 
-        <div className={`edu-card${visible ? ' edu-in' : ''}`}>
-          <div className="edu-header">
-            <div>
-              <div className="edu-degree">Matric Certificate</div>
-              <div className="edu-school">Please update school name here</div>
+        <div className="edu-list">
+          {degrees.map((d, i) => (
+            <div
+              key={d.degree}
+              className={`edu-card${visible ? ' edu-in' : ''}`}
+              style={{ transitionDelay: `${0.1 + i * 0.15}s` }}
+            >
+              <div className="edu-header">
+                <div>
+                  <div className="edu-degree">{d.degree}</div>
+                  <div className="edu-school">{d.school} · {d.location}</div>
+                </div>
+                <div className="edu-year">{d.period}</div>
+              </div>
+              {d.note ? <p className="edu-note">{d.note}</p> : null}
+              <div className="edu-tags">
+                {d.tags.map((t, j) => (
+                  <span
+                    key={t}
+                    className={`tag edu-tag${visible ? ' edu-tag--in' : ''}`}
+                    style={{ transitionDelay: `${0.3 + i * 0.15 + j * 0.06}s` }}
+                  >
+                    {t}
+                  </span>
+                ))}
+              </div>
             </div>
-            <div className="edu-year">Update Year</div>
-          </div>
-          <div className="edu-tags">
-            {tags.map((t, i) => (
-              <span
-                key={t}
-                className={`tag edu-tag${visible ? ' edu-tag--in' : ''}`}
-                style={{ transitionDelay: `${0.3 + i * 0.07}s` }}
-              >
-                {t}
-              </span>
-            ))}
-          </div>
+          ))}
         </div>
       </div>
 
@@ -41,6 +75,7 @@ export default function Education() {
           opacity: 0; transform: translateY(28px);
           transition: opacity 0.6s ease 0.1s, transform 0.6s ease 0.1s, box-shadow 0.3s;
         }
+        .edu-list { display: flex; flex-direction: column; gap: 20px; }
         .edu-card.edu-in { opacity:1; transform:none; }
         .edu-card:hover { box-shadow: 0 10px 36px rgba(16,185,129,0.1); }
         .edu-header {
@@ -51,7 +86,8 @@ export default function Education() {
           font-family: 'Cormorant Garamond', serif;
           font-size: 1.4rem; font-weight: 500; color: var(--charcoal); margin-bottom: 6px;
         }
-        .edu-school { font-size: 13px; color: var(--mid); }
+        .edu-school { font-size: 13px; color: var(--mid); margin-bottom: 2px; }
+        .edu-note { font-size: 13px; color: var(--mid); line-height: 1.65; margin-bottom: 14px; border-left: 3px solid var(--emerald-300); padding-left: 12px; }
         .edu-year {
           font-size: 11px; font-weight: 600; letter-spacing: 0.1em;
           text-transform: uppercase; color: var(--light-txt); white-space: nowrap;
