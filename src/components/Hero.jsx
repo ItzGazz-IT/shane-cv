@@ -30,47 +30,59 @@ export default function Hero() {
 
   return (
     <section id="hero" className="hero">
-      <div className="hero-blob hero-blob--1" aria-hidden="true" />
-      <div className="hero-blob hero-blob--2" aria-hidden="true" />
+      <div className="hero-grid-overlay" aria-hidden="true" />
+      <div className="hero-glow" aria-hidden="true" />
 
       <div className="container hero-inner">
         <div className="hero-text">
-          <span className="label">Available for work</span>
+          <div className="hero-eyebrow">
+            <span className="hero-eyebrow-line" />
+            <span className="label" style={{ margin: 0 }}>Available for work · Barbourville, KY</span>
+          </div>
+
           <h1 className="hero-name">
-            <span className="hero-name-line1">Shane</span><br />
-            <em className="hero-name-line2">Van Den Aardweg</em>
+            <span className="hero-name-first">Shane</span>
+            <span className="hero-name-last">Van Den<br/>Aardweg</span>
           </h1>
 
-          <p className="hero-typewriter">
-            <span>{displayed}</span>
-            <span className="hero-cursor">|</span>
-          </p>
+          <div className="hero-typewriter-row">
+            <span className="hero-typewriter-prefix">_</span>
+            <span className="hero-typewriter">{displayed}<span className="hero-cursor">█</span></span>
+          </div>
 
           <p className="hero-tagline">
-            Cum Laude graduate based in Barbourville, KY — open to roles
-            in Fayetteville NC or Barbourville KY. Available immediately.
+            Cum Laude graduate. First Team soccer athlete. Open to roles in
+            Fayetteville, NC or Barbourville, KY.
           </p>
 
           <div className="hero-actions">
-            <a href="#contact" className="btn btn--dark mag-btn">Contact me</a>
-            <a
-              href="/shane-cv/cv-print.html?print=1"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn btn--outline mag-btn"
-            >
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
-                   stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
-                <polyline points="7 10 12 15 17 10"/>
-                <line x1="12" y1="15" x2="12" y2="3"/>
-              </svg>
+            <a href="#contact" className="btn btn--dark">Get in touch</a>
+            <a href="/shane-cv/cv-print.html?print=1" target="_blank" rel="noopener noreferrer" className="btn btn--outline">
               Download CV
             </a>
+          </div>
+
+          <div className="hero-stats">
+            <div className="hero-stat">
+              <span className="hero-stat-val">3.72</span>
+              <span className="hero-stat-lbl">GPA</span>
+            </div>
+            <div className="hero-stat-div" />
+            <div className="hero-stat">
+              <span className="hero-stat-val">2×</span>
+              <span className="hero-stat-lbl">Dean's List</span>
+            </div>
+            <div className="hero-stat-div" />
+            <div className="hero-stat">
+              <span className="hero-stat-val">8+</span>
+              <span className="hero-stat-lbl">Roles</span>
+            </div>
           </div>
         </div>
 
         <div className="hero-photo-wrap">
+          <div className="hero-photo-corner hero-photo-corner--tl" />
+          <div className="hero-photo-corner hero-photo-corner--br" />
           <div className="hero-photo-frame">
             <img
               src="/shane-cv/profile.jpg"
@@ -81,13 +93,10 @@ export default function Hero() {
             />
             <div className="hero-photo-fallback">SV</div>
           </div>
-          <div className="hero-photo-ring" aria-hidden="true" />
-          <div className="hero-float-tag">
-            <span>KY</span>
-            <small>Barbourville, USA</small>
+          <div className="hero-badge">
+            <span className="hero-badge-val">CUM LAUDE</span>
+            <span className="hero-badge-sub">Exercise Science</span>
           </div>
-          <div className="hero-pill hero-pill--1">Motivated</div>
-          <div className="hero-pill hero-pill--2">Available</div>
         </div>
       </div>
 
@@ -101,138 +110,152 @@ export default function Hero() {
           min-height: 100vh;
           display: flex; align-items: center;
           position: relative; overflow: hidden;
-          padding: 120px 0 80px;
+          padding: 100px 0 80px;
+          background: var(--bg);
         }
-        .hero-blob {
-          position: absolute; border-radius: 50%;
-          filter: blur(80px); pointer-events: none; z-index: 0;
+        .hero-grid-overlay {
+          position: absolute; inset: 0; z-index: 0;
+          background-image:
+            linear-gradient(rgba(0,255,135,0.03) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(0,255,135,0.03) 1px, transparent 1px);
+          background-size: 60px 60px;
         }
-        .hero-blob--1 {
-          width: 600px; height: 600px;
-          background: rgba(16,185,129,0.1);
-          bottom: -100px; left: -120px;
-        }
-        .hero-blob--2 {
-          width: 400px; height: 400px;
-          background: rgba(16,185,129,0.07);
-          top: 10%; right: 5%;
+        .hero-glow {
+          position: absolute; width: 700px; height: 700px;
+          border-radius: 50%; z-index: 0; pointer-events: none;
+          background: radial-gradient(circle, rgba(0,255,135,0.08) 0%, transparent 65%);
+          top: -200px; right: -100px;
         }
         .hero-inner {
-          display: grid;
-          grid-template-columns: 1fr 420px;
-          gap: 60px; align-items: center;
+          display: grid; grid-template-columns: 1fr 460px;
+          gap: 80px; align-items: center;
           position: relative; z-index: 1;
         }
-        .hero-text { display: flex; flex-direction: column; gap: 20px; }
+        .hero-text { display: flex; flex-direction: column; gap: 24px; }
+        .hero-eyebrow { display: flex; align-items: center; gap: 14px; }
+        .hero-eyebrow-line { width: 32px; height: 1px; background: var(--accent); }
         .hero-name {
-          font-family: 'Cormorant Garamond', serif;
-          font-size: clamp(3rem, 7vw, 5.2rem);
-          font-weight: 300; line-height: 0.95;
-          color: var(--charcoal);
+          font-family: 'Bebas Neue', sans-serif;
+          line-height: 0.9; letter-spacing: 0.02em;
         }
-        .hero-name-line2 {
-          font-style: italic; color: var(--emerald-500);
+        .hero-name-first {
+          display: block;
+          font-size: clamp(4rem, 9vw, 8rem);
+          color: var(--white);
         }
-        .hero-typewriter {
-          font-size: clamp(1rem, 2vw, 1.2rem);
-          color: var(--mid); font-weight: 400; min-height: 1.6em;
+        .hero-name-last {
+          display: block;
+          font-size: clamp(2.5rem, 5.5vw, 5rem);
+          color: var(--accent);
         }
+        .hero-typewriter-row {
+          display: flex; align-items: center; gap: 8px;
+          font-family: 'Space Mono', monospace;
+          font-size: 14px; color: var(--mid);
+        }
+        .hero-typewriter-prefix { color: var(--accent); }
+        .hero-typewriter { min-height: 1.4em; }
         .hero-cursor {
-          display: inline-block;
+          display: inline-block; font-size: 12px;
+          color: var(--accent);
           animation: blink 1s step-end infinite;
-          color: var(--emerald-500); font-weight: 300;
         }
         @keyframes blink { 50% { opacity: 0 } }
         .hero-tagline {
-          font-size: 15px; line-height: 1.75; color: var(--mid);
-          max-width: 480px;
+          font-size: 15px; line-height: 1.8; color: var(--mid);
+          max-width: 460px;
         }
         .hero-actions { display: flex; gap: 12px; flex-wrap: wrap; }
+        .hero-stats {
+          display: flex; align-items: center; gap: 24px;
+          padding: 20px 0; border-top: 1px solid var(--border-dim);
+        }
+        .hero-stat { display: flex; flex-direction: column; gap: 2px; }
+        .hero-stat-val {
+          font-family: 'Bebas Neue', sans-serif;
+          font-size: 1.8rem; color: var(--white); line-height: 1;
+          letter-spacing: 0.04em;
+        }
+        .hero-stat-lbl {
+          font-family: 'Space Mono', monospace;
+          font-size: 9px; color: var(--dim); letter-spacing: 0.15em; text-transform: uppercase;
+        }
+        .hero-stat-div { width: 1px; height: 32px; background: var(--border-dim); }
 
         /* Photo */
         .hero-photo-wrap {
-          position: relative; width: 100%;
-          max-width: 380px; margin-left: auto;
+          position: relative; width: 100%; max-width: 460px;
           animation: fadeLeft 0.9s ease both;
         }
-        @keyframes fadeLeft {
-          from { opacity: 0; transform: translateX(30px); }
-          to   { opacity: 1; transform: none; }
-        }
+        @keyframes fadeLeft { from{opacity:0;transform:translateX(30px)} to{opacity:1;transform:none} }
         .hero-photo-frame {
-          width: 100%; aspect-ratio: 4/5;
-          border-radius: 28px; overflow: hidden;
-          background: var(--emerald-100);
-          position: relative;
+          width: 100%; aspect-ratio: 3/4;
+          overflow: hidden; position: relative;
+          background: var(--bg3);
         }
         .hero-photo {
           width: 100%; height: 100%;
-          object-fit: cover; object-position: center 20%;
-          display: block;
+          object-fit: cover; object-position: center 15%;
+          display: block; filter: grayscale(20%);
+          transition: filter 0.4s;
         }
+        .hero-photo:hover { filter: grayscale(0%); }
         .hero-photo-fallback {
           position: absolute; inset: 0;
           display: flex; align-items: center; justify-content: center;
-          font-family: 'Cormorant Garamond', serif;
-          font-size: 4rem; color: var(--emerald-500); font-weight: 300;
+          font-family: 'Bebas Neue', sans-serif;
+          font-size: 6rem; color: var(--accent);
         }
-        .hero-photo-ring {
-          position: absolute; inset: -12px;
-          border-radius: 36px;
-          border: 1.5px solid rgba(16,185,129,0.25);
-          pointer-events: none;
+        .hero-photo-corner {
+          position: absolute; width: 24px; height: 24px; z-index: 2;
         }
-        .hero-float-tag {
-          position: absolute; bottom: 28px; left: -20px;
-          background: var(--charcoal); color: #fff;
-          border-radius: 16px; padding: 12px 18px;
-          display: flex; flex-direction: column;
-          box-shadow: 0 8px 24px rgba(17,24,39,0.18);
+        .hero-photo-corner--tl {
+          top: -6px; left: -6px;
+          border-top: 2px solid var(--accent);
+          border-left: 2px solid var(--accent);
         }
-        .hero-float-tag span { font-size: 1.1rem; font-weight: 600; line-height: 1; }
-        .hero-float-tag small {
-          font-size: 10px; opacity: 0.65;
-          letter-spacing: 0.08em; text-transform: uppercase; margin-top: 2px;
+        .hero-photo-corner--br {
+          bottom: -6px; right: -6px;
+          border-bottom: 2px solid var(--accent);
+          border-right: 2px solid var(--accent);
         }
-        .hero-pill {
-          position: absolute;
-          background: rgba(255,255,255,0.9);
-          backdrop-filter: blur(8px);
-          border: 1px solid rgba(16,185,129,0.3);
-          border-radius: 50px;
-          font-size: 12px; font-weight: 500;
-          color: var(--charcoal);
-          padding: 6px 14px;
-          box-shadow: 0 4px 12px rgba(17,24,39,0.1);
+        .hero-badge {
+          position: absolute; bottom: 28px; left: -24px;
+          background: var(--bg); border: 1px solid var(--accent);
+          padding: 14px 20px;
+          display: flex; flex-direction: column; gap: 2px;
+          box-shadow: 0 0 30px rgba(0,255,135,0.15);
         }
-        .hero-pill--1 { top: 16px; right: -10px; animation: float1 3.5s ease-in-out infinite; }
-        .hero-pill--2 { top: 44%; right: -18px; animation: float2 4s ease-in-out infinite; }
-        @keyframes float1 { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-8px)} }
-        @keyframes float2 { 0%,100%{transform:translateY(0)} 50%{transform:translateY(8px)} }
-
+        .hero-badge-val {
+          font-family: 'Bebas Neue', sans-serif;
+          font-size: 1.1rem; color: var(--accent); letter-spacing: 0.12em;
+        }
+        .hero-badge-sub {
+          font-family: 'Space Mono', monospace;
+          font-size: 9px; color: var(--mid); letter-spacing: 0.1em; text-transform: uppercase;
+        }
         .hero-scroll {
           position: absolute; bottom: 28px; left: 50%;
           transform: translateX(-50%);
           display: flex; flex-direction: column; align-items: center; gap: 8px;
-          opacity: 0.5;
         }
         .hero-scroll-line {
-          width: 1px; height: 36px;
-          background: var(--charcoal);
+          width: 1px; height: 40px; background: var(--accent);
           animation: scrollPulse 1.8s ease-in-out infinite;
         }
-        .hero-scroll span { font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--mid); }
-        @keyframes scrollPulse { 0%,100%{opacity:0.3;transform:scaleY(1)} 50%{opacity:1;transform:scaleY(1.3)} }
-
-        .mag-btn { transition: transform 0.25s, box-shadow 0.25s, opacity 0.2s; }
-        .mag-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(17,24,39,0.14); }
-
-        @media (max-width: 860px) {
+        .hero-scroll span {
+          font-family: 'Space Mono', monospace;
+          font-size: 9px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--dim);
+        }
+        @keyframes scrollPulse { 0%,100%{opacity:0.3} 50%{opacity:1} }
+        @media (max-width: 900px) {
           .hero-inner { grid-template-columns: 1fr; gap: 48px; }
-          .hero-photo-wrap { max-width: 300px; margin: 0 auto; }
-          .hero-tagline { margin-left: auto; margin-right: auto; }
+          .hero-photo-wrap { max-width: 320px; }
+          .hero-badge { left: -8px; }
         }
       `}</style>
     </section>
   )
 }
+
+

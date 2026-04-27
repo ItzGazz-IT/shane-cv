@@ -6,34 +6,43 @@ export default function Footer() {
           <span className="footer-mark">SV</span>
           <span className="footer-name">Shane Van Den Aardweg</span>
         </div>
-        <p className="footer-copy">© {new Date().getFullYear()} · Johannesburg, South Africa</p>
-        <p className="footer-built">Built with care · <a href="mailto:gareth@itzgazz.co.za">ItzGazz IT</a></p>
+        <div className="footer-line" />
+        <div className="footer-bottom">
+          <p className="footer-copy">© {new Date().getFullYear()} · Barbourville, KY</p>
+          <p className="footer-built">Built by <a href="mailto:gareth@itzgazz.co.za">ItzGazz IT</a></p>
+        </div>
       </div>
 
       <style>{`
         .footer {
-          background: var(--charcoal); color: #fff;
+          background: var(--bg2);
+          border-top: 1px solid var(--border-dim);
           padding: 40px 0;
         }
-        .footer-inner {
-          display: flex; flex-direction: column; align-items: center; gap: 12px;
-          text-align: center;
-        }
-        .footer-brand {
-          display: flex; align-items: center; gap: 10px;
-        }
+        .footer-inner { display: flex; flex-direction: column; gap: 24px; }
+        .footer-brand { display: flex; align-items: center; gap: 14px; }
         .footer-mark {
-          width: 34px; height: 34px; border-radius: 50%;
-          background: var(--emerald-500); color: var(--charcoal);
-          font-size: 11px; font-weight: 700; letter-spacing: 0.04em;
+          width: 36px; height: 36px;
+          background: var(--accent); color: var(--bg);
+          font-family: 'Bebas Neue', sans-serif; font-size: 16px; letter-spacing: 0.08em;
           display: flex; align-items: center; justify-content: center;
+          clip-path: polygon(6px 0%, 100% 0%, calc(100% - 6px) 100%, 0% 100%);
         }
         .footer-name {
-          font-size: 15px; font-weight: 500; color: rgba(255,255,255,0.9);
+          font-family: 'Space Mono', monospace;
+          font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--mid);
         }
-        .footer-copy { font-size: 12px; color: rgba(255,255,255,0.4); }
-        .footer-built { font-size: 11px; color: rgba(255,255,255,0.3); }
-        .footer-built a { color: var(--emerald-300); text-decoration: none; }
+        .footer-line { height: 1px; background: var(--border-dim); }
+        .footer-bottom { display: flex; justify-content: space-between; align-items: center; }
+        .footer-copy {
+          font-family: 'Space Mono', monospace;
+          font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--dim);
+        }
+        .footer-built {
+          font-family: 'Space Mono', monospace;
+          font-size: 10px; letter-spacing: 0.08em; color: var(--dim);
+        }
+        .footer-built a { color: var(--accent); text-decoration: none; }
         .footer-built a:hover { text-decoration: underline; }
       `}</style>
     </footer>

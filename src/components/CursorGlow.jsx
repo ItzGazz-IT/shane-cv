@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useRef } from 'react'
 
 export default function CursorGlow() {
   const glowRef = useRef(null)
@@ -8,13 +8,12 @@ export default function CursorGlow() {
   useEffect(() => {
     const onMove = (e) => { pos.current = { x: e.clientX, y: e.clientY } }
     window.addEventListener('mousemove', onMove)
-
     let raf
     const loop = () => {
-      cur.current.x += (pos.current.x - cur.current.x) * 0.1
-      cur.current.y += (pos.current.y - cur.current.y) * 0.1
+      cur.current.x += (pos.current.x - cur.current.x) * 0.08
+      cur.current.y += (pos.current.y - cur.current.y) * 0.08
       if (glowRef.current) {
-        glowRef.current.style.transform = `translate(${cur.current.x - 200}px, ${cur.current.y - 200}px)`
+        glowRef.current.style.transform = `translate(${cur.current.x - 300}px, ${cur.current.y - 300}px)`
       }
       raf = requestAnimationFrame(loop)
     }
@@ -25,9 +24,9 @@ export default function CursorGlow() {
   return (
     <div ref={glowRef} aria-hidden="true" style={{
       position: 'fixed', top: 0, left: 0,
-      width: 400, height: 400,
+      width: 600, height: 600,
       borderRadius: '50%',
-      background: 'radial-gradient(circle, rgba(16,185,129,0.09) 0%, transparent 70%)',
+      background: 'radial-gradient(circle, rgba(0,255,135,0.06) 0%, transparent 65%)',
       pointerEvents: 'none',
       zIndex: 9999,
     }} />

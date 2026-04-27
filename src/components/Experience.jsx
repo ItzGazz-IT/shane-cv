@@ -9,8 +9,8 @@ const jobs = [
     active: true,
     bullets: [
       'Supervised and managed student staff within campus operations.',
-      'Coordinated daily schedules, resolved issues and maintained team performance standards.',
-      'Acted as a point of contact between students and management.',
+      'Coordinated daily schedules, resolved issues and maintained team performance.',
+      'Point of contact between students and management.',
     ],
   },
   {
@@ -20,9 +20,8 @@ const jobs = [
     period: '2024 – 2025',
     active: false,
     bullets: [
-      'Ran the Silver Sneaker community fitness programme as part of the degree internship.',
+      'Ran the Silver Sneaker community fitness programme as degree internship.',
       'Designed and led group exercise sessions for senior participants.',
-      'Applied exercise science principles in a real-world community health setting.',
     ],
   },
   {
@@ -33,8 +32,7 @@ const jobs = [
     active: false,
     bullets: [
       'Worked across all cafeteria stations: serving, food prep and the kitchen.',
-      'Transferred to the campus Starbucks — maintained excellent service with zero complaints.',
-      'Built strong working relationships with colleagues and management.',
+      'Transferred to campus Starbucks — zero complaints throughout.',
     ],
   },
   {
@@ -45,8 +43,7 @@ const jobs = [
     active: false,
     bullets: [
       'Taught full classes independently when the lead teacher was unavailable.',
-      'Assisted with all admin tasks, stock taking and setting assessments.',
-      'Worked supportively with children across all age groups.',
+      'Assisted with admin, stock taking and setting assessments.',
     ],
   },
   {
@@ -56,8 +53,8 @@ const jobs = [
     period: '2023 – Present',
     active: false,
     bullets: [
-      'Founded and run a personal football training academy with weekly Saturday sessions.',
-      'Coach and mentor children aged 8–13, developing skill, discipline and confidence.',
+      'Founded and run a football training academy with weekly Saturday sessions.',
+      'Coach and mentor children aged 8–13.',
     ],
   },
   {
@@ -66,9 +63,7 @@ const jobs = [
     location: 'Johannesburg',
     period: 'Jan – Nov 2022',
     active: false,
-    bullets: [
-      'Assisted with fundraising events — engaging the public, selling tickets and handling cash.',
-    ],
+    bullets: ['Fundraising events — public engagement, ticket sales, cash handling.'],
   },
   {
     title: 'Office Assistant',
@@ -76,9 +71,7 @@ const jobs = [
     location: 'Johannesburg',
     period: 'Mar – Dec 2018',
     active: false,
-    bullets: [
-      'Completed a range of administrative tasks within a professional corporate office environment.',
-    ],
+    bullets: ['Administrative tasks within a corporate office environment.'],
   },
   {
     title: 'Referee',
@@ -86,15 +79,12 @@ const jobs = [
     location: 'Johannesburg',
     period: 'Feb – Nov 2014',
     active: false,
-    bullets: [
-      'Explained and enforced regulations and rules to players, coaches and spectators.',
-      'Promoted good sportsmanship and inspected equipment for safety compliance.',
-    ],
+    bullets: ['Enforced regulations, promoted sportsmanship, inspected equipment.'],
   },
 ]
 
 export default function Experience() {
-  const [sectionRef, visible] = useScrollReveal({ threshold: 0.08 })
+  const [sectionRef, visible] = useScrollReveal({ threshold: 0.05 })
 
   return (
     <section id="experience" ref={sectionRef} className="section">
@@ -102,82 +92,98 @@ export default function Experience() {
         <span className="label">Career</span>
         <h2 className="section-title">Work Experience</h2>
 
-        <div className="exp-list">
+        <div className="exp-timeline">
           {jobs.map((job, i) => (
             <div
               key={job.title + i}
-              className={`exp-card${visible ? ' exp-card--in' : ''}`}
-              style={{ transitionDelay: `${0.1 + i * 0.15}s` }}
+              className={`exp-item${visible ? ' exp-item--in' : ''}`}
+              style={{ transitionDelay: `${0.05 + i * 0.08}s` }}
             >
-              <div className="exp-card-header">
-                <div>
-                  <div className="exp-card-title">{job.title}</div>
-                  <div className="exp-card-company">
-                    {job.company}
-                    <span> · {job.location}</span>
+              <div className="exp-line-col">
+                <div className={`exp-node${job.active ? ' exp-node--active' : ''}`} />
+                {i < jobs.length - 1 && <div className="exp-connector" />}
+              </div>
+              <div className="exp-content">
+                <div className="exp-header">
+                  <div>
+                    <div className="exp-title">{job.title}</div>
+                    <div className="exp-company">{job.company} <span>· {job.location}</span></div>
+                  </div>
+                  <div className="exp-meta">
+                    <span className="exp-period">{job.period}</span>
+                    {job.active && <span className="exp-badge">CURRENT</span>}
                   </div>
                 </div>
-                <div className="exp-card-meta">
-                  <span className="exp-card-period">{job.period}</span>
-                  {job.active && <span className="exp-card-badge">Current</span>}
-                </div>
+                <ul className="exp-bullets">
+                  {job.bullets.map((b, j) => <li key={j}>{b}</li>)}
+                </ul>
               </div>
-              <ul className="exp-card-bullets">
-                {job.bullets.map((b, j) => <li key={j}>{b}</li>)}
-              </ul>
             </div>
           ))}
         </div>
       </div>
 
       <style>{`
-        .exp-list { display: flex; flex-direction: column; gap: 20px; }
-        .exp-card {
-          background: var(--white);
-          border: 1px solid var(--border);
-          border-radius: 20px; padding: 32px;
-          opacity: 0; transform: translateY(28px);
-          transition: opacity 0.6s ease, transform 0.6s ease, box-shadow 0.3s;
+        .exp-timeline { display: flex; flex-direction: column; }
+        .exp-item {
+          display: grid; grid-template-columns: 40px 1fr;
+          gap: 0; opacity: 0; transform: translateX(-20px);
+          transition: opacity 0.5s ease, transform 0.5s ease;
         }
-        .exp-card--in { opacity: 1; transform: none; }
-        .exp-card:hover { box-shadow: 0 10px 36px rgba(16,185,129,0.1); }
-        .exp-card-header {
-          display: flex; justify-content: space-between;
-          align-items: flex-start; gap: 16px; margin-bottom: 16px;
+        .exp-item--in { opacity: 1; transform: none; }
+        .exp-line-col {
+          display: flex; flex-direction: column; align-items: center;
+          padding-top: 4px;
         }
-        .exp-card-title {
-          font-family: 'Cormorant Garamond', serif;
-          font-size: 1.3rem; font-weight: 500; color: var(--charcoal);
-          margin-bottom: 4px;
+        .exp-node {
+          width: 10px; height: 10px; flex-shrink: 0;
+          border: 2px solid var(--dim);
+          background: var(--bg);
         }
-        .exp-card-company {
-          font-size: 13px; color: var(--emerald-500); font-weight: 500;
+        .exp-node--active {
+          border-color: var(--accent);
+          background: var(--accent);
+          box-shadow: 0 0 12px var(--accent);
         }
-        .exp-card-company span { color: var(--light-txt); font-weight: 400; }
-        .exp-card-meta { display: flex; flex-direction: column; align-items: flex-end; gap: 6px; }
-        .exp-card-period {
-          font-size: 11px; font-weight: 600;
-          letter-spacing: 0.1em; text-transform: uppercase; color: var(--light-txt);
-          white-space: nowrap;
+        .exp-connector {
+          flex: 1; width: 1px; min-height: 20px;
+          background: var(--border-dim); margin: 4px 0;
         }
-        .exp-card-badge {
-          font-size: 10px; font-weight: 600; letter-spacing: 0.1em;
-          text-transform: uppercase;
-          background: var(--emerald-100); color: var(--emerald-600);
-          border: 1px solid var(--emerald-300);
-          padding: 3px 10px; border-radius: 50px;
+        .exp-content {
+          padding: 0 0 32px 24px;
+          border-bottom: 1px solid var(--border-dim);
+          margin-bottom: 0;
         }
-        .exp-card-bullets {
-          list-style: none; display: flex; flex-direction: column; gap: 8px;
+        .exp-item:last-child .exp-content { border-bottom: none; }
+        .exp-header {
+          display: flex; justify-content: space-between; align-items: flex-start;
+          gap: 16px; margin-bottom: 10px;
         }
-        .exp-card-bullets li {
-          font-size: 14px; color: var(--mid); line-height: 1.6;
-          padding-left: 16px; position: relative;
+        .exp-title {
+          font-family: 'Bebas Neue', sans-serif;
+          font-size: 1.25rem; color: var(--white); letter-spacing: 0.04em;
+          margin-bottom: 3px;
         }
-        .exp-card-bullets li::before {
-          content: '–'; position: absolute; left: 0;
-          color: var(--emerald-400);
+        .exp-company { font-size: 12px; color: var(--accent); font-weight: 500; }
+        .exp-company span { color: var(--dim); font-weight: 400; }
+        .exp-meta { display: flex; flex-direction: column; align-items: flex-end; gap: 6px; flex-shrink: 0; }
+        .exp-period {
+          font-family: 'Space Mono', monospace;
+          font-size: 10px; color: var(--dim); letter-spacing: 0.1em; white-space: nowrap;
         }
+        .exp-badge {
+          font-family: 'Space Mono', monospace;
+          font-size: 9px; letter-spacing: 0.15em;
+          color: var(--accent); border: 1px solid var(--accent);
+          padding: 2px 8px;
+        }
+        .exp-bullets { list-style: none; display: flex; flex-direction: column; gap: 5px; }
+        .exp-bullets li {
+          font-size: 13px; color: var(--mid); line-height: 1.65;
+          padding-left: 14px; position: relative;
+        }
+        .exp-bullets li::before { content: '>'; position: absolute; left: 0; color: var(--accent); font-size: 10px; top: 2px; }
+        @media (max-width: 600px) { .exp-header { flex-direction: column; gap: 6px; } }
       `}</style>
     </section>
   )

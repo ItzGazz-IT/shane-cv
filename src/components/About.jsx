@@ -1,10 +1,10 @@
 import { useScrollReveal, useCountUp } from '../hooks/useAnimations'
 
 const STATS = [
-  { value: 3,   suffix: '.72', label: 'GPA · Cum Laude Graduate' },
-  { value: 2,   suffix: '',   label: 'University Degrees'        },
-  { value: 2,   suffix: '×',  label: "Dean's List Award"         },
-  { value: 8,   suffix: '+',  label: 'Roles & Experiences'       },
+  { value: 3,   suffix: '.72', label: 'GPA · Cum Laude' },
+  { value: 2,   suffix: '',   label: 'Degrees Earned'   },
+  { value: 2,   suffix: '×',  label: "Dean's List"      },
+  { value: 8,   suffix: '+',  label: 'Roles'            },
 ]
 
 function StatCard({ value, suffix, label, active }) {
@@ -27,21 +27,18 @@ export default function About() {
           <div className="about-main stagger-1">
             <span className="label">About</span>
             <h2 className="section-title" style={{ marginBottom: '24px' }}>
-              Driven by purpose &<br />
-              <em style={{ fontStyle: 'italic', color: 'var(--emerald-500)' }}>a hunger to grow</em>
+              Driven.<br/>
+              <span style={{ color: 'var(--accent)' }}>Proven.</span>
             </h2>
             <p className="about-body">
-              Organised, dependable and driven — Shane is a Cum Laude Exercise Science graduate
-              (3.72 GPA) who was scouted in South Africa by Gulf United FC and relocated to
-              Barbourville, Kentucky to study and play First Team soccer at Union Commonwealth
-              University, earning the Dean's List twice while excelling in sport, work and
-              academics simultaneously.
+              Shane is a Cum Laude Exercise Science graduate (3.72 GPA) who was scouted in South Africa
+              by Gulf United FC — he relocated to Barbourville, Kentucky, earned First Team soccer honours
+              at Union Commonwealth University and made the Dean's List twice, all while working and studying.
             </p>
             <p className="about-body" style={{ marginTop: '18px' }}>
-              Currently based in Barbourville, KY and actively looking for opportunities in
-              Fayetteville, NC or Barbourville, KY. Shane brings competitive discipline,
-              genuine enthusiasm, strong people skills and the proven ability to thrive under
-              pressure. Available immediately and ready to make an impact.
+              Currently based in Barbourville, KY. Open to roles in Fayetteville, NC or Barbourville, KY.
+              Brings competitive discipline, leadership and genuine hustle to every environment.
+              Available immediately.
             </p>
             <div className="about-tags">
               {['Competitive', 'Fast Learner', 'Reliable', 'Team Player', 'Good Leader', 'Adaptable'].map(t => (
@@ -58,34 +55,32 @@ export default function About() {
 
       <style>{`
         .about-grid {
-          display: grid;
-          grid-template-columns: 1fr 300px;
-          gap: 64px; align-items: start;
+          display: grid; grid-template-columns: 1fr 280px;
+          gap: 80px; align-items: start;
         }
-        .about-body { font-size: 15px; line-height: 1.8; color: var(--mid); }
-        .about-tags { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 28px; }
-        .about-stats {
-          display: grid; grid-template-columns: 1fr 1fr; gap: 12px;
-        }
+        .about-body { font-size: 15px; line-height: 1.85; color: var(--mid); }
+        .about-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 28px; }
+        .about-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; }
         .about-stat {
-          background: var(--white);
-          border: 1px solid var(--border);
-          border-radius: 20px; padding: 24px 18px;
+          background: var(--card);
+          border: 1px solid var(--border-dim);
+          padding: 24px 18px;
           display: flex; flex-direction: column; gap: 6px;
-          transition: transform 0.3s ease, box-shadow 0.3s ease;
+          transition: border-color 0.3s, box-shadow 0.3s;
         }
         .about-stat:hover {
-          transform: translateY(-4px);
-          box-shadow: 0 12px 32px rgba(16,185,129,0.14);
+          border-color: var(--accent);
+          box-shadow: 0 0 20px var(--accent-glow);
         }
         .about-stat__value {
-          font-family: 'Cormorant Garamond', serif;
-          font-size: 2.8rem; font-weight: 400;
-          color: var(--emerald-500); line-height: 1;
+          font-family: 'Bebas Neue', sans-serif;
+          font-size: 2.6rem; color: var(--accent); line-height: 1;
+          letter-spacing: 0.04em;
         }
         .about-stat__label {
-          font-size: 11px; color: var(--light-txt);
-          letter-spacing: 0.04em; line-height: 1.4;
+          font-family: 'Space Mono', monospace;
+          font-size: 9px; color: var(--dim);
+          letter-spacing: 0.15em; text-transform: uppercase; line-height: 1.4;
         }
         @media (max-width: 860px) {
           .about-grid { grid-template-columns: 1fr; gap: 40px; }

@@ -1,20 +1,16 @@
 import { useScrollReveal } from '../hooks/useAnimations'
 
 const techSkills = [
-  { name: 'Sport & Coaching',    level: 95 },
-  { name: 'Leadership',          level: 90 },
-  { name: 'Communication',       level: 88 },
-  { name: 'Customer Service',    level: 85 },
-  { name: 'Computer Skills',     level: 72 },
+  { name: 'Sport & Coaching',  level: 95 },
+  { name: 'Leadership',        level: 90 },
+  { name: 'Communication',     level: 88 },
+  { name: 'Customer Service',  level: 85 },
+  { name: 'Computer Skills',   level: 72 },
 ]
 
 const coreSkills = [
-  'Competitive Drive',
-  'Fast Learner',
-  'Team Worker',
-  'Reliability',
-  'Adaptability',
-  'Attention to Detail',
+  'Competitive Drive', 'Fast Learner', 'Team Worker',
+  'Reliability', 'Adaptability', 'Attention to Detail',
 ]
 
 const languages = [
@@ -28,20 +24,18 @@ export default function Skills() {
   return (
     <section id="skills" ref={sectionRef} className="section section--alt">
       <div className="container">
-        <div className={`skills-title-wrap${visible ? ' sk-revealed' : ''}`}>
-          <span className="label">Capabilities</span>
-          <h2 className="section-title">Skills &amp; Languages</h2>
-        </div>
+        <span className="label">Capabilities</span>
+        <h2 className="section-title">Skills &amp; Languages</h2>
 
         <div className="skills-grid">
-          <div className={`skills-card sk-card-1${visible ? ' sk-revealed' : ''}`}>
-            <h3 className="skills-card-title">Key Skills</h3>
+          <div className={`sk-panel${visible ? ' sk-in' : ''}`} style={{ transitionDelay: '0.1s' }}>
+            <div className="sk-panel-head">KEY SKILLS</div>
             <div className="skill-bars">
               {techSkills.map((s, i) => (
-                <div key={s.name} className="skill-bar-item" style={{ '--bar-delay': `${0.2 + i * 0.1}s` }}>
+                <div key={s.name} className="skill-bar-item">
                   <div className="skill-bar-label">
                     <span>{s.name}</span>
-                    <span className="skill-bar-pct">{s.level}%</span>
+                    <span className="skill-bar-pct">{visible ? s.level : 0}%</span>
                   </div>
                   <div className="skill-bar-track">
                     <div
@@ -54,110 +48,83 @@ export default function Skills() {
             </div>
           </div>
 
-          <div className="skills-right">
-            <div className={`skills-card sk-card-2${visible ? ' sk-revealed' : ''}`}>
-              <h3 className="skills-card-title">Core Strengths</h3>
-              <div className="core-skills">
-                {coreSkills.map((s, i) => (
-                  <div
-                    key={s}
-                    className={`core-skill-item${visible ? ' core-visible' : ''}`}
-                    style={{ '--cs-delay': `${0.4 + i * 0.08}s` }}
-                  >
-                    <div className="core-skill-icon">
-                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
-                           stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
-                        <polyline points="20 6 9 17 4 12"/>
-                      </svg>
-                    </div>
-                    <span>{s}</span>
-                  </div>
-                ))}
-              </div>
+          <div className={`sk-panel${visible ? ' sk-in' : ''}`} style={{ transitionDelay: '0.22s' }}>
+            <div className="sk-panel-head">CORE STRENGTHS</div>
+            <div className="core-skills">
+              {coreSkills.map((s, i) => (
+                <div
+                  key={s}
+                  className={`core-skill-item${visible ? ' core-visible' : ''}`}
+                  style={{ '--cs-delay': `${0.4 + i * 0.07}s` }}
+                >
+                  <span className="core-skill-icon">›</span>
+                  <span>{s}</span>
+                </div>
+              ))}
             </div>
+          </div>
 
-            <div className={`skills-card sk-card-3${visible ? ' sk-revealed' : ''}`}>
-              <h3 className="skills-card-title">Languages</h3>
-              <div className="lang-list">
-                {languages.map(l => (
-                  <div key={l.lang} className="lang-item">
-                    <span className="lang-name">{l.lang}</span>
-                    <span className="tag" style={{ fontSize: '11px' }}>{l.prof}</span>
-                  </div>
-                ))}
-              </div>
+          <div className={`sk-panel${visible ? ' sk-in' : ''}`} style={{ transitionDelay: '0.34s' }}>
+            <div className="sk-panel-head">LANGUAGES</div>
+            <div className="lang-list">
+              {languages.map(l => (
+                <div key={l.lang} className="lang-item">
+                  <span className="lang-name">{l.lang}</span>
+                  <span className="tag">{l.prof}</span>
+                </div>
+              ))}
             </div>
           </div>
         </div>
       </div>
 
       <style>{`
-        .skills-title-wrap {
-          opacity: 0; transform: translateY(20px);
-          transition: opacity 0.6s ease, transform 0.6s ease;
-        }
-        .skills-title-wrap.sk-revealed { opacity:1; transform:none; }
-        .sk-card-1, .sk-card-2, .sk-card-3 {
-          opacity: 0; transform: translateY(30px);
-          transition: opacity 0.6s ease, transform 0.6s ease;
-        }
-        .sk-card-1.sk-revealed { opacity:1; transform:none; transition-delay:0.15s; }
-        .sk-card-2.sk-revealed { opacity:1; transform:none; transition-delay:0.25s; }
-        .sk-card-3.sk-revealed { opacity:1; transform:none; transition-delay:0.38s; }
         .skills-grid {
-          display: grid; grid-template-columns: 1fr 360px;
-          gap: 20px; align-items: start;
+          display: grid; grid-template-columns: 1fr 1fr 1fr;
+          gap: 2px;
         }
-        .skills-card {
-          background: var(--white); border: 1px solid var(--border);
-          border-radius: 24px; padding: 32px;
-          transition: box-shadow 0.3s ease;
+        .sk-panel {
+          background: var(--card); border: 1px solid var(--border-dim);
+          padding: 32px; opacity: 0; transform: translateY(24px);
+          transition: opacity 0.5s ease, transform 0.5s ease, border-color 0.3s;
         }
-        .skills-card:hover { box-shadow: 0 10px 36px rgba(16,185,129,0.1); }
-        .skills-card-title {
-          font-size: 1.25rem; font-weight: 500; color: var(--charcoal); margin-bottom: 24px;
+        .sk-panel.sk-in { opacity: 1; transform: none; }
+        .sk-panel:hover { border-color: var(--accent); }
+        .sk-panel-head {
+          font-family: 'Space Mono', monospace;
+          font-size: 9px; letter-spacing: 0.25em; color: var(--accent);
+          margin-bottom: 24px;
         }
         .skill-bars { display: flex; flex-direction: column; gap: 18px; }
         .skill-bar-label {
           display: flex; justify-content: space-between;
-          font-size: 14px; color: var(--mid); margin-bottom: 8px;
+          font-size: 13px; color: var(--mid); margin-bottom: 8px;
         }
-        .skill-bar-pct { color: var(--light-txt); }
+        .skill-bar-pct { color: var(--accent); font-family: 'Space Mono', monospace; font-size: 11px; }
         .skill-bar-track {
-          height: 6px; background: var(--emerald-100);
-          border-radius: 50px; overflow: hidden;
+          height: 2px; background: var(--border-dim); overflow: hidden;
         }
         .skill-bar-fill {
           height: 100%; width: 0;
-          background: linear-gradient(90deg, var(--emerald-300), var(--emerald-500));
-          border-radius: 50px; transition: width 0s;
+          background: linear-gradient(90deg, var(--accent-dim), var(--accent));
+          transition: width 0s;
         }
         .skill-bar-fill--go {
           width: var(--fill-w);
-          transition: width 1s cubic-bezier(.4,0,.2,1) var(--bar-delay);
+          transition: width 1.2s cubic-bezier(.4,0,.2,1) var(--bar-delay);
         }
-        .skills-right { display: flex; flex-direction: column; gap: 20px; }
         .core-skills { display: flex; flex-direction: column; gap: 10px; }
         .core-skill-item {
-          display: flex; align-items: center; gap: 12px;
-          font-size: 14px; color: var(--mid);
-          opacity: 0; transform: translateX(-12px);
+          display: flex; align-items: center; gap: 10px;
+          font-size: 13px; color: var(--mid);
+          opacity: 0; transform: translateX(-10px);
           transition: opacity 0.4s ease var(--cs-delay), transform 0.4s ease var(--cs-delay);
         }
-        .core-skill-item.core-visible { opacity:1; transform:none; }
-        .core-skill-icon {
-          width: 26px; height: 26px; border-radius: 50%;
-          background: var(--emerald-100);
-          display: flex; align-items: center; justify-content: center;
-          color: var(--emerald-500); flex-shrink: 0;
-        }
-        .lang-list { display: flex; flex-direction: column; }
-        .lang-item {
-          display: flex; justify-content: space-between; align-items: center;
-          padding: 12px 0; border-bottom: 1px solid var(--border);
-        }
-        .lang-item:last-child { border-bottom: none; padding-bottom: 0; }
-        .lang-name { font-size: 15px; color: var(--charcoal); }
+        .core-skill-item.core-visible { opacity: 1; transform: none; }
+        .core-skill-icon { color: var(--accent); font-size: 16px; line-height: 1; }
+        .lang-list { display: flex; flex-direction: column; gap: 16px; }
+        .lang-item { display: flex; justify-content: space-between; align-items: center; }
+        .lang-name { font-size: 14px; color: var(--txt); }
         @media (max-width: 860px) {
           .skills-grid { grid-template-columns: 1fr; }
         }
