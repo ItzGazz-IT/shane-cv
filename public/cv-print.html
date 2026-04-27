@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shane Van Den Aardweg — CV</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --em:      #10b981;
+      --em-lt:   #d1fae5;
+      --em-md:   #6ee7b7;
+      --char:    #111827;
+      --mid:     #6b7280;
+      --lite:    #9ca3af;
+      --border:  #d1fae5;
+      --sidebar-bg: #111827;
+    }
+
+    html { font-size: 14px; }
+
+    body {
+      font-family: 'DM Sans', system-ui, sans-serif;
+      background: #e8f5f1;
+      color: var(--char);
+      -webkit-font-smoothing: antialiased;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+      padding: 32px 16px 60px;
+    }
+
+    .print-bar {
+      width: 100%; max-width: 900px;
+      display: flex; align-items: center; justify-content: space-between;
+      margin-bottom: 18px;
+    }
+    .print-bar p { font-size: 13px; color: #4a7c6a; letter-spacing: 0.04em; }
+    .print-btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: var(--sidebar-bg); color: #fff;
+      font-family: 'DM Sans', sans-serif; font-size: 13px;
+      font-weight: 500; letter-spacing: 0.08em;
+      padding: 10px 22px; border-radius: 50px; border: none;
+      cursor: pointer; text-transform: uppercase; transition: opacity 0.2s;
+    }
+    .print-btn:hover { opacity: 0.85; }
+
+    .page {
+      width: 900px; min-height: 1273px;
+      background: #fff;
+      display: grid; grid-template-columns: 260px 1fr;
+      box-shadow: 0 24px 80px rgba(17,24,39,0.18);
+      border-radius: 4px; overflow: hidden;
+    }
+
+    /* Sidebar */
+    .sidebar {
+      background: var(--sidebar-bg);
+      color: #f0faf6; padding: 44px 26px 40px;
+      display: flex; flex-direction: column; gap: 28px;
+    }
+    .sidebar-photo {
+      width: 120px; height: 120px; border-radius: 50%;
+      overflow: hidden; border: 3px solid rgba(16,185,129,0.5);
+      margin: 0 auto; background: #1f2937; flex-shrink: 0;
+    }
+    .sidebar-photo img {
+      width: 100%; height: 100%;
+      object-fit: cover; object-position: center 15%;
+    }
+    .sidebar-name { text-align: center; }
+    .sidebar-name h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.7rem; font-weight: 400; line-height: 1.1;
+      color: #fff; letter-spacing: 0.02em; margin-bottom: 6px;
+    }
+    .sidebar-name h1 em { color: var(--em-md); font-style: italic; }
+    .sidebar-name p {
+      font-size: 10px; font-weight: 600; letter-spacing: 0.22em;
+      text-transform: uppercase; color: var(--em-md);
+    }
+    .sidebar-divider { border: none; border-top: 1px solid rgba(16,185,129,0.2); }
+    .sidebar-section h4 {
+      font-size: 9.5px; font-weight: 700; letter-spacing: 0.25em;
+      text-transform: uppercase; color: var(--em-md); margin-bottom: 14px;
+    }
+
+    .contact-list { display: flex; flex-direction: column; gap: 10px; }
+    .contact-row {
+      display: flex; align-items: flex-start; gap: 10px;
+      font-size: 12px; line-height: 1.5; color: #c8e8de;
+    }
+    .contact-row svg { flex-shrink: 0; margin-top: 1px; opacity: 0.7; }
+
+    .skill-bar-item { margin-bottom: 10px; }
+    .skill-bar-meta {
+      display: flex; justify-content: space-between;
+      font-size: 11.5px; color: #b0d4c4; margin-bottom: 5px;
+    }
+    .skill-bar-track {
+      height: 4px; background: rgba(255,255,255,0.12);
+      border-radius: 4px; overflow: hidden;
+    }
+    .skill-bar-fill {
+      height: 100%;
+      background: linear-gradient(90deg, #10b981, #6ee7b7);
+      border-radius: 4px;
+    }
+
+    .core-list { display: flex; flex-direction: column; gap: 7px; }
+    .core-item { display: flex; align-items: center; gap: 8px; font-size: 12px; color: #b0d4c4; }
+    .core-dot { width: 5px; height: 5px; border-radius: 50%; background: var(--em); flex-shrink: 0; }
+
+    .lang-list { display: flex; flex-direction: column; gap: 8px; }
+    .lang-row { display: flex; justify-content: space-between; align-items: center; }
+    .lang-name { font-size: 12px; color: #b0d4c4; }
+    .lang-badge {
+      font-size: 10px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase;
+      background: rgba(16,185,129,0.2); color: var(--em-md);
+      padding: 3px 9px; border-radius: 50px;
+    }
+
+    /* Main */
+    .main { padding: 44px 40px 40px; display: flex; flex-direction: column; gap: 28px; }
+
+    .main-header { border-bottom: 1.5px solid var(--border); padding-bottom: 20px; }
+    .main-header .role-label {
+      font-size: 10px; font-weight: 700; letter-spacing: 0.28em;
+      text-transform: uppercase; color: var(--em); margin-bottom: 8px;
+    }
+    .main-header h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2.3rem; font-weight: 400; line-height: 1.05;
+      color: var(--char); margin-bottom: 12px;
+    }
+    .main-header h2 span { color: var(--em); font-style: italic; }
+    .main-header .summary {
+      font-size: 12.5px; color: var(--mid); line-height: 1.75; max-width: 480px;
+    }
+
+    .sec-head { display: flex; align-items: center; gap: 12px; margin-bottom: 18px; }
+    .sec-head h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.25rem; font-weight: 500; color: var(--char); letter-spacing: 0.02em;
+    }
+    .sec-head-line { flex: 1; height: 1px; background: var(--border); }
+
+    .exp-item {
+      display: grid; grid-template-columns: 10px 1fr;
+      gap: 0 16px; margin-bottom: 18px;
+    }
+    .exp-item:last-child { margin-bottom: 0; }
+    .exp-dot-col { display: flex; flex-direction: column; align-items: center; padding-top: 5px; }
+    .exp-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--border); flex-shrink: 0; }
+    .exp-dot--active { background: var(--em); box-shadow: 0 0 0 3px rgba(16,185,129,0.2); }
+    .exp-line { flex: 1; width: 1px; background: var(--border); margin: 4px 0; min-height: 12px; }
+    .exp-top { display: flex; justify-content: space-between; align-items: flex-start; gap: 8px; margin-bottom: 2px; }
+    .exp-title { font-family: 'Cormorant Garamond', serif; font-size: 1.05rem; font-weight: 500; color: var(--char); }
+    .exp-period { font-size: 10.5px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--lite); white-space: nowrap; }
+    .exp-company { font-size: 12px; color: var(--em); font-weight: 500; margin-bottom: 7px; }
+    .exp-company span { color: var(--lite); font-weight: 400; }
+    .exp-bullets { list-style: none; display: flex; flex-direction: column; gap: 4px; }
+    .exp-bullets li { font-size: 11.5px; color: var(--mid); line-height: 1.6; padding-left: 12px; position: relative; }
+    .exp-bullets li::before { content: '–'; position: absolute; left: 0; color: var(--em-md); }
+
+    .edu-card { background: #f0faf6; border: 1px solid var(--border); border-radius: 12px; padding: 18px 20px; }
+    .edu-top { display: flex; justify-content: space-between; align-items: flex-start; gap: 8px; margin-bottom: 10px; }
+    .edu-degree { font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; font-weight: 500; color: var(--char); margin-bottom: 3px; }
+    .edu-school { font-size: 12px; color: var(--mid); }
+    .edu-year { font-size: 10.5px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--lite); white-space: nowrap; }
+    .edu-tags { display: flex; flex-wrap: wrap; gap: 5px; }
+    .edu-tag {
+      font-size: 10.5px; background: rgba(16,185,129,0.1); color: var(--em);
+      border: 1px solid rgba(16,185,129,0.22); padding: 3px 9px; border-radius: 50px; font-weight: 500;
+    }
+
+    .next-page-note { display: none; font-size: 10.5px; color: var(--lite); letter-spacing: 0.08em; text-transform: uppercase; font-weight: 600; margin-top: 4px; }
+
+    /* Print */
+    @media print {
+      @page { size: A4; margin: 12mm 10mm; }
+      html { font-size: 12px; }
+      body { margin: 0; padding: 0; background: #fff; display: block; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      .print-bar { display: none !important; }
+      .page { width: 100%; min-height: auto; box-shadow: none; border-radius: 0; overflow: visible; display: grid; grid-template-columns: 68mm 1fr; break-after: auto; }
+      .sidebar { padding: 22px 16px 20px; gap: 18px; }
+      .main { padding: 26px 24px 22px; gap: 20px; }
+      .main-header, .sidebar-section, .sec-head, .exp-item, .edu-card { break-inside: avoid; page-break-inside: avoid; }
+      .exp-item { margin-bottom: 12px; }
+      .next-page-note { display: block; break-inside: avoid; page-break-inside: avoid; }
+      .education-section { break-before: page; page-break-before: always; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="print-bar">
+    <p>Tip: Choose "Save as PDF" as your printer · Set margins to Default</p>
+    <button class="print-btn" onclick="window.print()">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="6 9 6 2 18 2 18 9"/>
+        <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/>
+        <rect x="6" y="14" width="12" height="8"/>
+      </svg>
+      Save as PDF
+    </button>
+  </div>
+
+  <div class="page">
+
+    <aside class="sidebar">
+
+      <div class="sidebar-photo">
+        <img src="./profile.jpg" alt="Shane Van Den Aardweg" />
+      </div>
+
+      <div class="sidebar-name">
+        <h1>Shane<br/><em>Van Den Aardweg</em></h1>
+        <p>Available for Work</p>
+      </div>
+
+      <hr class="sidebar-divider" />
+
+      <div class="sidebar-section">
+        <h4>Contact</h4>
+        <div class="contact-list">
+          <div class="contact-row">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+            <span>update@email.com</span>
+          </div>
+          <div class="contact-row">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.18 2 2 0 0 1 3.58 1h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 8.37a16 16 0 0 0 7.73 7.73l.87-.87a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 17z"/></svg>
+            <span>+27 00 000 0000</span>
+          </div>
+          <div class="contact-row">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+            <span>Johannesburg<br/>South Africa</span>
+          </div>
+        </div>
+      </div>
+
+      <hr class="sidebar-divider" />
+
+      <div class="sidebar-section">
+        <h4>Key Skills</h4>
+        <div>
+          <div class="skill-bar-item">
+            <div class="skill-bar-meta"><span>Communication</span><span>90%</span></div>
+            <div class="skill-bar-track"><div class="skill-bar-fill" style="width:90%"></div></div>
+          </div>
+          <div class="skill-bar-item">
+            <div class="skill-bar-meta"><span>Problem Solving</span><span>88%</span></div>
+            <div class="skill-bar-track"><div class="skill-bar-fill" style="width:88%"></div></div>
+          </div>
+          <div class="skill-bar-item">
+            <div class="skill-bar-meta"><span>Microsoft Office</span><span>80%</span></div>
+            <div class="skill-bar-track"><div class="skill-bar-fill" style="width:80%"></div></div>
+          </div>
+          <div class="skill-bar-item">
+            <div class="skill-bar-meta"><span>Customer Service</span><span>85%</span></div>
+            <div class="skill-bar-track"><div class="skill-bar-fill" style="width:85%"></div></div>
+          </div>
+        </div>
+      </div>
+
+      <hr class="sidebar-divider" />
+
+      <div class="sidebar-section">
+        <h4>Core Strengths</h4>
+        <div class="core-list">
+          <div class="core-item"><span class="core-dot"></span>Reliability</div>
+          <div class="core-item"><span class="core-dot"></span>Teamwork</div>
+          <div class="core-item"><span class="core-dot"></span>Adaptability</div>
+          <div class="core-item"><span class="core-dot"></span>Attention to Detail</div>
+          <div class="core-item"><span class="core-dot"></span>Time Management</div>
+        </div>
+      </div>
+
+      <hr class="sidebar-divider" />
+
+      <div class="sidebar-section">
+        <h4>Languages</h4>
+        <div class="lang-list">
+          <div class="lang-row">
+            <span class="lang-name">English</span>
+            <span class="lang-badge">Fluent</span>
+          </div>
+          <div class="lang-row">
+            <span class="lang-name">Afrikaans</span>
+            <span class="lang-badge">Conversational</span>
+          </div>
+        </div>
+      </div>
+
+    </aside>
+
+    <main class="main">
+
+      <div class="main-header">
+        <div class="role-label">Curriculum Vitae</div>
+        <h2>Shane <span>Van Den Aardweg</span></h2>
+        <p class="summary">
+          Motivated and dependable individual with a strong work ethic, a positive attitude
+          and a genuine desire to learn and grow. Open to all opportunities and available
+          immediately — based in Johannesburg, South Africa.
+        </p>
+      </div>
+
+      <!-- Experience -->
+      <div>
+        <div class="sec-head">
+          <h3>Work Experience</h3>
+          <div class="sec-head-line"></div>
+        </div>
+
+        <div class="exp-item">
+          <div class="exp-dot-col"><div class="exp-dot exp-dot--active"></div><div class="exp-line"></div></div>
+          <div class="exp-body">
+            <div class="exp-top">
+              <div class="exp-title">Most Recent Role</div>
+              <div class="exp-period">Update Me</div>
+            </div>
+            <div class="exp-company">Previous Employer <span>&middot; Johannesburg</span></div>
+            <ul class="exp-bullets">
+              <li>Please update this section with Shane's actual work experience</li>
+              <li>Add the company name, job title, dates and key responsibilities</li>
+              <li>Highlight achievements and skills used in this role</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="exp-item">
+          <div class="exp-dot-col"><div class="exp-dot"></div></div>
+          <div class="exp-body">
+            <div class="exp-top">
+              <div class="exp-title">Earlier Role</div>
+              <div class="exp-period">Update Me</div>
+            </div>
+            <div class="exp-company">Previous Employer <span>&middot; Johannesburg</span></div>
+            <ul class="exp-bullets">
+              <li>Add another role here with relevant experience</li>
+              <li>Include duties, responsibilities and any accomplishments</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Education -->
+      <p class="next-page-note">Education continues on next page</p>
+      <div class="education-section">
+        <div class="sec-head">
+          <h3>Education</h3>
+          <div class="sec-head-line"></div>
+        </div>
+        <div class="edu-card">
+          <div class="edu-top">
+            <div>
+              <div class="edu-degree">Matric Certificate</div>
+              <div class="edu-school">Update school name here</div>
+            </div>
+            <div class="edu-year">Update Year</div>
+          </div>
+          <div class="edu-tags">
+            <span class="edu-tag">Update</span>
+            <span class="edu-tag">With</span>
+            <span class="edu-tag">Actual</span>
+            <span class="edu-tag">Subjects</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- References -->
+      <p style="font-size:11.5px; color: var(--lite); letter-spacing: 0.06em; text-transform: uppercase; font-weight: 600;">
+        References available upon request
+      </p>
+
+    </main>
+  </div>
+
+  <script>
+    if (new URLSearchParams(window.location.search).get('print') === '1') {
+      window.addEventListener('load', () => setTimeout(() => window.print(), 600))
+    }
+  </script>
+</body>
+</html>
