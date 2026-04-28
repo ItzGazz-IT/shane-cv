@@ -7,7 +7,7 @@ const degrees = [
     location: 'Kentucky, USA',
     period: '2024 – 2025',
     tags: ['Exercise Science', 'Cum Laude', '3.72 GPA', "Dean's List × 2", 'First Team Soccer', 'Silver Sneaker Internship'],
-    note: 'I was scouted by Gulf United FC in South Africa — I relocated to the USA to study and play Division I soccer. I completed my degree Cum Laude with a 3.72 GPA.',
+    note: 'I was scouted by Gulf United FC in South Africa — I relocated to the USA to study and play NAIA soccer. I completed my degree Cum Laude with a 3.72 GPA.',
   },
   {
     degree: 'BSc: Health Sciences (Incomplete – Transferred)',
