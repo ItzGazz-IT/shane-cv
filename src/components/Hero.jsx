@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 
 const roles = [
+  'Graduate Assistant (Appointed)',
   'Exercise Science Graduate',
   'Football Coach & Mentor',
   'Cum Laude · 3.72 GPA',
@@ -51,7 +52,7 @@ export default function Hero() {
           </div>
 
           <p className="hero-tagline">
-            Cum Laude graduate. First Team soccer athlete. Based in Barbourville, KY — available immediately.
+            Cum Laude graduate. Awarded a Graduate Assistant position at Union Commonwealth University. Based in Barbourville, KY — available immediately.
           </p>
 
           <div className="hero-actions">
@@ -79,24 +80,6 @@ export default function Hero() {
           </div>
         </div>
 
-        <div className="hero-photo-wrap">
-          <div className="hero-photo-corner hero-photo-corner--tl" />
-          <div className="hero-photo-corner hero-photo-corner--br" />
-          <div className="hero-photo-frame">
-            <img
-              src="/shane-cv/profile.jpg"
-              alt="Shane Van Den Aardweg"
-              className="hero-photo"
-              onLoad={e  => { e.target.nextSibling.style.display = 'none' }}
-              onError={e => { e.target.style.display = 'none' }}
-            />
-            <div className="hero-photo-fallback">SV</div>
-          </div>
-          <div className="hero-badge">
-            <span className="hero-badge-val">CUM LAUDE</span>
-            <span className="hero-badge-sub">Exercise Science</span>
-          </div>
-        </div>
       </div>
 
       <div className="hero-scroll">
@@ -126,7 +109,7 @@ export default function Hero() {
           top: -200px; right: -100px;
         }
         .hero-inner {
-          display: grid; grid-template-columns: 1fr 460px;
+          display: grid; grid-template-columns: 1fr;
           gap: 80px; align-items: center;
           position: relative; z-index: 1;
         }

@@ -2,11 +2,22 @@ import { useScrollReveal } from '../hooks/useAnimations'
 
 const jobs = [
   {
+    title: 'Graduate Assistant (Appointed)',
+    company: 'Union Commonwealth University',
+    location: 'Kentucky, USA',
+    period: '2026 – Present',
+    active: true,
+    bullets: [
+      'I was awarded a Graduate Assistant position at Union Commonwealth University.',
+      'I support university programmes through academic and operational responsibilities.',
+    ],
+  },
+  {
     title: 'Student Supervisor & Manager',
     company: 'Union Commonwealth University',
     location: 'Kentucky, USA',
     period: '2024 – 2025',
-    active: true,
+    active: false,
     bullets: [
       'I supervised and managed student staff within campus operations.',
       'I coordinated daily schedules, resolved issues and maintained team performance.',
