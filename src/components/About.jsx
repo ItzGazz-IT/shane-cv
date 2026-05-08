@@ -35,6 +35,12 @@ export default function About() {
               by Gulf United FC — I relocated to Barbourville, Kentucky, earned First Team soccer honours
               at Union Commonwealth University and made the Dean's List twice, all while working and studying.
             </p>
+            <div className="about-highlight">
+              <p style={{ margin: 0, fontSize: '13px', fontWeight: '600', color: 'var(--accent)', marginBottom: '8px', letterSpacing: '0.05em', textTransform: 'uppercase' }}>Graduate Assistant</p>
+              <p className="about-body" style={{ marginTop: 0, fontSize: '14px', lineHeight: '1.7', color: 'var(--mid)' }}>
+                A Graduate Assistant (GA) is a graduate student who is employed by their university in a dual role: pursuing an advanced degree while simultaneously working part-time for a specific academic department or administrative office.
+              </p>
+            </div>
             <p className="about-body" style={{ marginTop: '18px' }}>
               I'm currently based in Barbourville, KY and available immediately.
               I bring competitive discipline, leadership and genuine hustle to every environment I'm part of.
@@ -80,6 +86,13 @@ export default function About() {
           font-family: 'Space Mono', monospace;
           font-size: 9px; color: var(--dim);
           letter-spacing: 0.15em; text-transform: uppercase; line-height: 1.4;
+        }
+        .about-highlight {
+          background: rgba(0, 255, 135, 0.05);
+          border-left: 3px solid var(--accent);
+          padding: 20px;
+          margin: 20px 0;
+          border-radius: 4px;
         }
         @media (max-width: 860px) {
           .about-grid { grid-template-columns: 1fr; gap: 40px; }
