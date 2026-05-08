@@ -79,14 +79,15 @@ Error generating stack: `+e.message+`
           .navbar__mobile { display: flex; }
           .navbar__logo-text { display: none; }
         }
-      `})]})}var g=[`Graduate Assistant (Appointed)`,`Exercise Science Graduate`,`Football Coach & Mentor`,`Cum Laude · 3.72 GPA`,`Open to New Opportunities`];function _(){let[e,t]=(0,l.useState)(0),[n,r]=(0,l.useState)(``),[i,a]=(0,l.useState)(!1);return(0,l.useEffect)(()=>{let o=g[e],s;return!i&&n.length<o.length?s=setTimeout(()=>r(o.slice(0,n.length+1)),60):!i&&n.length===o.length?s=setTimeout(()=>a(!0),2200):i&&n.length>0?s=setTimeout(()=>r(n.slice(0,-1)),32):i&&n.length===0&&(a(!1),t((e+1)%g.length)),()=>clearTimeout(s)},[n,i,e]),(0,f.jsxs)(`section`,{id:`hero`,className:`hero`,children:[(0,f.jsx)(`div`,{className:`hero-grid-overlay`,"aria-hidden":`true`}),(0,f.jsx)(`div`,{className:`hero-glow`,"aria-hidden":`true`}),(0,f.jsx)(`div`,{className:`container hero-inner`,children:(0,f.jsxs)(`div`,{className:`hero-text`,children:[(0,f.jsxs)(`div`,{className:`hero-eyebrow`,children:[(0,f.jsx)(`span`,{className:`hero-eyebrow-line`}),(0,f.jsx)(`span`,{className:`label`,style:{margin:0},children:`Available for work · Barbourville, KY`})]}),(0,f.jsxs)(`h1`,{className:`hero-name`,children:[(0,f.jsx)(`span`,{className:`hero-name-first`,children:`Shane`}),(0,f.jsxs)(`span`,{className:`hero-name-last`,children:[`Van Den`,(0,f.jsx)(`br`,{}),`Aardweg`]})]}),(0,f.jsxs)(`div`,{className:`hero-typewriter-row`,children:[(0,f.jsx)(`span`,{className:`hero-typewriter-prefix`,children:`_`}),(0,f.jsxs)(`span`,{className:`hero-typewriter`,children:[n,(0,f.jsx)(`span`,{className:`hero-cursor`,children:`█`})]})]}),(0,f.jsx)(`p`,{className:`hero-tagline`,children:`Cum Laude graduate. Awarded a Graduate Assistant position at Union Commonwealth University. Based in Barbourville, KY — available immediately.`}),(0,f.jsxs)(`div`,{className:`hero-actions`,children:[(0,f.jsx)(`a`,{href:`#contact`,className:`btn btn--dark`,children:`Get in touch`}),(0,f.jsx)(`a`,{href:`/shane-cv/cv-print.html?print=1`,target:`_blank`,rel:`noopener noreferrer`,className:`btn btn--outline`,children:`Download CV`})]}),(0,f.jsxs)(`div`,{className:`hero-stats`,children:[(0,f.jsxs)(`div`,{className:`hero-stat`,children:[(0,f.jsx)(`span`,{className:`hero-stat-val`,children:`3.72`}),(0,f.jsx)(`span`,{className:`hero-stat-lbl`,children:`GPA`})]}),(0,f.jsx)(`div`,{className:`hero-stat-div`}),(0,f.jsxs)(`div`,{className:`hero-stat`,children:[(0,f.jsx)(`span`,{className:`hero-stat-val`,children:`2×`}),(0,f.jsx)(`span`,{className:`hero-stat-lbl`,children:`Dean's List`})]}),(0,f.jsx)(`div`,{className:`hero-stat-div`}),(0,f.jsxs)(`div`,{className:`hero-stat`,children:[(0,f.jsx)(`span`,{className:`hero-stat-val`,children:`8+`}),(0,f.jsx)(`span`,{className:`hero-stat-lbl`,children:`Roles`})]})]})]})}),(0,f.jsxs)(`div`,{className:`hero-scroll`,children:[(0,f.jsx)(`div`,{className:`hero-scroll-line`}),(0,f.jsx)(`span`,{children:`scroll`})]}),(0,f.jsx)(`style`,{children:`
+      `})]})}var g=[`Graduate Assistant (Appointed)`,`Exercise Science Graduate`,`Football Coach & Mentor`,`Cum Laude · 3.72 GPA`,`Open to New Opportunities`];function _(){let[e,t]=(0,l.useState)(0),[n,r]=(0,l.useState)(``),[i,a]=(0,l.useState)(!1);return(0,l.useEffect)(()=>{let o=g[e],s;return!i&&n.length<o.length?s=setTimeout(()=>r(o.slice(0,n.length+1)),60):!i&&n.length===o.length?s=setTimeout(()=>a(!0),2200):i&&n.length>0?s=setTimeout(()=>r(n.slice(0,-1)),32):i&&n.length===0&&(a(!1),t((e+1)%g.length)),()=>clearTimeout(s)},[n,i,e]),(0,f.jsxs)(`section`,{id:`hero`,className:`hero`,children:[(0,f.jsx)(`div`,{className:`hero-grid-overlay`,"aria-hidden":`true`}),(0,f.jsx)(`div`,{className:`hero-glow`,"aria-hidden":`true`}),(0,f.jsx)(`div`,{className:`container hero-inner`,children:(0,f.jsx)(`div`,{className:`hero-content`,children:(0,f.jsxs)(`div`,{className:`hero-text hero-text--enhanced`,children:[(0,f.jsx)(`div`,{className:`hero-decorative-top`,"aria-hidden":`true`}),(0,f.jsxs)(`div`,{className:`hero-eyebrow`,children:[(0,f.jsx)(`span`,{className:`hero-eyebrow-line`}),(0,f.jsx)(`span`,{className:`label`,style:{margin:0},children:`Available for work · Barbourville, KY`}),(0,f.jsx)(`span`,{className:`hero-eyebrow-line`})]}),(0,f.jsx)(`div`,{className:`hero-badge-container`,children:(0,f.jsxs)(`div`,{className:`hero-badge`,children:[(0,f.jsx)(`span`,{className:`badge-icon`,children:`★`}),(0,f.jsx)(`span`,{className:`badge-text`,children:`Graduate Assistant · Union Commonwealth University`})]})}),(0,f.jsxs)(`h1`,{className:`hero-name`,children:[(0,f.jsx)(`span`,{className:`hero-name-first`,children:`Shane`}),(0,f.jsxs)(`span`,{className:`hero-name-last`,children:[`Van Den`,(0,f.jsx)(`br`,{}),`Aardweg`]})]}),(0,f.jsxs)(`div`,{className:`hero-typewriter-row`,children:[(0,f.jsx)(`span`,{className:`hero-typewriter-prefix`,children:`_`}),(0,f.jsxs)(`span`,{className:`hero-typewriter`,children:[n,(0,f.jsx)(`span`,{className:`hero-cursor`,children:`█`})]})]}),(0,f.jsx)(`p`,{className:`hero-tagline`,children:`Cum Laude Exercise Science graduate (3.72 GPA) with competitive discipline and proven leadership. Based in Barbourville, KY — available immediately.`}),(0,f.jsxs)(`div`,{className:`hero-actions`,children:[(0,f.jsx)(`a`,{href:`#about`,className:`btn btn--dark`,children:`Explore my story`}),(0,f.jsx)(`a`,{href:`/shane-cv/cv-print.html?print=1`,target:`_blank`,rel:`noopener noreferrer`,className:`btn btn--outline`,children:`Download CV`})]}),(0,f.jsx)(`div`,{className:`hero-stats-wrapper`,children:(0,f.jsxs)(`div`,{className:`hero-stats`,children:[(0,f.jsxs)(`div`,{className:`hero-stat`,children:[(0,f.jsx)(`span`,{className:`hero-stat-val`,children:`3.72`}),(0,f.jsx)(`span`,{className:`hero-stat-lbl`,children:`GPA`})]}),(0,f.jsx)(`div`,{className:`hero-stat-div`}),(0,f.jsxs)(`div`,{className:`hero-stat`,children:[(0,f.jsx)(`span`,{className:`hero-stat-val`,children:`2×`}),(0,f.jsx)(`span`,{className:`hero-stat-lbl`,children:`Dean's List`})]}),(0,f.jsx)(`div`,{className:`hero-stat-div`}),(0,f.jsxs)(`div`,{className:`hero-stat`,children:[(0,f.jsx)(`span`,{className:`hero-stat-val`,children:`8+`}),(0,f.jsx)(`span`,{className:`hero-stat-lbl`,children:`Roles`})]})]})}),(0,f.jsx)(`div`,{className:`hero-decorative-bottom`,"aria-hidden":`true`})]})})}),(0,f.jsxs)(`div`,{className:`hero-scroll`,children:[(0,f.jsx)(`div`,{className:`hero-scroll-line`}),(0,f.jsx)(`span`,{children:`scroll`})]}),(0,f.jsx)(`style`,{children:`
         .hero {
           min-height: 100vh;
-          display: flex; align-items: center;
+          display: flex; align-items: center; justify-content: center;
           position: relative; overflow: hidden;
-          padding: 100px 0 80px;
+          padding: 110px 20px 90px;
           background: var(--bg);
         }
+
         .hero-grid-overlay {
           position: absolute; inset: 0; z-index: 0;
           background-image:
@@ -94,140 +95,186 @@ Error generating stack: `+e.message+`
             linear-gradient(90deg, rgba(0,255,135,0.03) 1px, transparent 1px);
           background-size: 60px 60px;
         }
+
         .hero-glow {
-          position: absolute; width: 700px; height: 700px;
+          position: absolute; width: 820px; height: 820px;
           border-radius: 50%; z-index: 0; pointer-events: none;
-          background: radial-gradient(circle, rgba(0,255,135,0.08) 0%, transparent 65%);
-          top: -200px; right: -100px;
+          background: radial-gradient(circle, rgba(0,255,135,0.11) 0%, transparent 70%);
+          top: 50%; left: 50%;
+          transform: translate(-50%, -50%);
+          animation: pulseGlow 6s ease-in-out infinite;
         }
+        @keyframes pulseGlow { 0%, 100% { opacity: 0.65; } 50% { opacity: 1; } }
+
         .hero-inner {
-          display: grid; grid-template-columns: 1fr;
-          gap: 80px; align-items: center;
           position: relative; z-index: 1;
+          width: 100%;
+          display: flex; justify-content: center;
         }
-        .hero-text { display: flex; flex-direction: column; gap: 24px; }
-        .hero-eyebrow { display: flex; align-items: center; gap: 14px; }
-        .hero-eyebrow-line { width: 32px; height: 1px; background: var(--accent); }
+        .hero-content {
+          width: 100%;
+          max-width: 700px;
+        }
+        .hero-text { 
+          display: flex; flex-direction: column; gap: 26px;
+          align-items: center; text-align: center;
+          animation: heroRise 0.9s ease-out both;
+        }
+        .hero-text--enhanced { gap: 26px; }
+        @keyframes heroRise { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+
+        .hero-decorative-top {
+          width: 2px; height: 34px;
+          background: linear-gradient(to bottom, transparent, var(--accent));
+          margin-bottom: 8px;
+          margin-left: auto; margin-right: auto;
+        }
+        .hero-decorative-bottom {
+          width: 2px; height: 34px;
+          background: linear-gradient(to top, transparent, var(--accent));
+          margin-top: 8px;
+          margin-left: auto; margin-right: auto;
+        }
+
+        .hero-eyebrow { 
+          display: flex; align-items: center; gap: 14px;
+          justify-content: center;
+        }
+        .hero-eyebrow-line { 
+          width: 36px; height: 1px; background: var(--accent);
+        }
+
+        .hero-badge-container { margin: 0; }
+        .hero-badge {
+          display: inline-flex; align-items: center; gap: 10px;
+          background: rgba(0, 255, 135, 0.07);
+          border: 1px solid rgba(0, 255, 135, 0.3);
+          border-radius: 8px;
+          padding: 12px 18px;
+          width: fit-content;
+          box-shadow: 0 0 16px rgba(0,255,135,0.08);
+          transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+        }
+        .hero-badge:hover {
+          border-color: rgba(0, 255, 135, 0.6);
+          box-shadow: 0 0 26px rgba(0,255,135,0.18);
+          transform: translateY(-2px);
+        }
+        .badge-icon {
+          font-size: 14px; color: var(--accent);
+        }
+        .badge-text {
+          font-size: 12px; font-weight: 600; color: var(--accent);
+          letter-spacing: 0.03em;
+        }
+
         .hero-name {
           font-family: 'Bebas Neue', sans-serif;
-          line-height: 0.9; letter-spacing: 0.02em;
+          line-height: 0.93; letter-spacing: 0.03em;
+          margin: 8px 0;
         }
         .hero-name-first {
           display: block;
-          font-size: clamp(4rem, 9vw, 8rem);
+          font-size: clamp(4.7rem, 11vw, 8.2rem);
           color: var(--white);
+          letter-spacing: 0.02em;
         }
         .hero-name-last {
           display: block;
-          font-size: clamp(2.5rem, 5.5vw, 5rem);
+          font-size: clamp(3.2rem, 7.4vw, 5.8rem);
           color: var(--accent);
+          letter-spacing: 0.06em;
         }
         .hero-typewriter-row {
           display: flex; align-items: center; gap: 8px;
           font-family: 'Space Mono', monospace;
           font-size: 14px; color: var(--mid);
+          justify-content: center;
+          min-height: 1.6em;
         }
-        .hero-typewriter-prefix { color: var(--accent); }
+        .hero-typewriter-prefix { 
+          color: var(--accent); font-weight: 700;
+        }
         .hero-typewriter { min-height: 1.4em; }
         .hero-cursor {
-          display: inline-block; font-size: 12px;
+          display: inline-block; font-size: 11px;
           color: var(--accent);
           animation: blink 1s step-end infinite;
         }
         @keyframes blink { 50% { opacity: 0 } }
+
         .hero-tagline {
           font-size: 15px; line-height: 1.8; color: var(--mid);
-          max-width: 460px;
+          max-width: 560px;
+          margin: 4px auto 0;
         }
-        .hero-actions { display: flex; gap: 12px; flex-wrap: wrap; }
+        .hero-actions { 
+          display: flex; gap: 12px; flex-wrap: wrap;
+          justify-content: center;
+          margin-top: 10px;
+        }
+        .hero-stats-wrapper {
+          width: 100%;
+          display: flex; justify-content: center;
+        }
         .hero-stats {
-          display: flex; align-items: center; gap: 24px;
-          padding: 20px 0; border-top: 1px solid var(--border-dim);
+          display: flex; align-items: center; gap: 34px;
+          padding: 22px 0;
+          border-top: 1px solid var(--border-dim);
+          border-bottom: 1px solid var(--border-dim);
+          width: 100%;
+          justify-content: center;
         }
-        .hero-stat { display: flex; flex-direction: column; gap: 2px; }
+        .hero-stat { 
+          display: flex; flex-direction: column; gap: 4px;
+          align-items: center;
+          transition: transform 0.2s ease;
+        }
+        .hero-stat:hover { transform: translateY(-2px); }
         .hero-stat-val {
           font-family: 'Bebas Neue', sans-serif;
-          font-size: 1.8rem; color: var(--white); line-height: 1;
-          letter-spacing: 0.04em;
+          font-size: 2rem; color: var(--accent); line-height: 1;
+          letter-spacing: 0.06em;
         }
         .hero-stat-lbl {
           font-family: 'Space Mono', monospace;
           font-size: 9px; color: var(--dim); letter-spacing: 0.15em; text-transform: uppercase;
         }
-        .hero-stat-div { width: 1px; height: 32px; background: var(--border-dim); }
+        .hero-stat-div { width: 1px; height: 34px; background: var(--border-dim); opacity: 0.5; }
 
-        /* Photo */
-        .hero-photo-wrap {
-          position: relative; width: 100%; max-width: 460px;
-          animation: fadeLeft 0.9s ease both;
-        }
-        @keyframes fadeLeft { from{opacity:0;transform:translateX(30px)} to{opacity:1;transform:none} }
-        .hero-photo-frame {
-          width: 100%; aspect-ratio: 3/4;
-          overflow: hidden; position: relative;
-          background: var(--bg3);
-        }
-        .hero-photo {
-          width: 100%; height: 100%;
-          object-fit: cover; object-position: center 15%;
-          display: block; filter: grayscale(20%);
-          transition: filter 0.4s;
-        }
-        .hero-photo:hover { filter: grayscale(0%); }
-        .hero-photo-fallback {
-          position: absolute; inset: 0;
-          display: flex; align-items: center; justify-content: center;
-          font-family: 'Bebas Neue', sans-serif;
-          font-size: 6rem; color: var(--accent);
-        }
-        .hero-photo-corner {
-          position: absolute; width: 24px; height: 24px; z-index: 2;
-        }
-        .hero-photo-corner--tl {
-          top: -6px; left: -6px;
-          border-top: 2px solid var(--accent);
-          border-left: 2px solid var(--accent);
-        }
-        .hero-photo-corner--br {
-          bottom: -6px; right: -6px;
-          border-bottom: 2px solid var(--accent);
-          border-right: 2px solid var(--accent);
-        }
-        .hero-badge {
-          position: absolute; bottom: 28px; left: -24px;
-          background: var(--bg); border: 1px solid var(--accent);
-          padding: 14px 20px;
-          display: flex; flex-direction: column; gap: 2px;
-          box-shadow: 0 0 30px rgba(0,255,135,0.15);
-        }
-        .hero-badge-val {
-          font-family: 'Bebas Neue', sans-serif;
-          font-size: 1.1rem; color: var(--accent); letter-spacing: 0.12em;
-        }
-        .hero-badge-sub {
-          font-family: 'Space Mono', monospace;
-          font-size: 9px; color: var(--mid); letter-spacing: 0.1em; text-transform: uppercase;
-        }
         .hero-scroll {
-          position: absolute; bottom: 28px; left: 50%;
+          position: absolute; bottom: 26px; left: 50%;
           transform: translateX(-50%);
           display: flex; flex-direction: column; align-items: center; gap: 8px;
         }
         .hero-scroll-line {
-          width: 1px; height: 40px; background: var(--accent);
-          animation: scrollPulse 1.8s ease-in-out infinite;
+          width: 1px; height: 34px; background: var(--accent);
+          animation: scrollPulse 2s ease-in-out infinite;
         }
         .hero-scroll span {
           font-family: 'Space Mono', monospace;
           font-size: 9px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--dim);
         }
         @keyframes scrollPulse { 0%,100%{opacity:0.3} 50%{opacity:1} }
-        @media (max-width: 900px) {
-          .hero-inner { grid-template-columns: 1fr; gap: 48px; }
-          .hero-photo-wrap { max-width: 320px; }
-          .hero-badge { left: -8px; }
+
+        @media (max-width: 768px) {
+          .hero {
+            min-height: auto;
+            padding: 108px 16px 84px;
+          }
+          .hero-content { max-width: 100%; }
+          .hero-name-first { font-size: clamp(3.6rem, 17vw, 5.4rem); }
+          .hero-name-last { font-size: clamp(2.3rem, 11vw, 3.8rem); }
+          .hero-tagline { font-size: 14px; }
+          .hero-stats {
+            gap: 18px;
+            padding: 18px 0;
+          }
+          .hero-stat-val { font-size: 1.7rem; }
+          .hero-stat-div { height: 28px; }
+          .hero-scroll { bottom: 18px; }
         }
-      `})]})}function v(e={}){let t=(0,l.useRef)(null),[n,r]=(0,l.useState)(!1);return(0,l.useEffect)(()=>{let n=t.current;if(!n)return;let i=new IntersectionObserver(([e])=>{e.isIntersecting&&(r(!0),i.disconnect())},{threshold:e.threshold??.15,rootMargin:e.rootMargin??`0px`});return i.observe(n),()=>i.disconnect()},[]),[t,n]}function y(e,t=1200,n=!1){let[r,i]=(0,l.useState)(0);return(0,l.useEffect)(()=>{if(!n)return;let r=null,a=n=>{r||=n;let o=Math.min((n-r)/t,1),s=1-(1-o)**3;i(Math.floor(s*e)),o<1?requestAnimationFrame(a):i(e)};requestAnimationFrame(a)},[n,e,t]),r}var b=[{value:3,suffix:`.72`,label:`GPA · Cum Laude`},{value:2,suffix:``,label:`Degrees Earned`},{value:2,suffix:`×`,label:`Dean's List`},{value:8,suffix:`+`,label:`Roles`}];function x({value:e,suffix:t,label:n,active:r}){return(0,f.jsxs)(`div`,{className:`about-stat`,children:[(0,f.jsxs)(`span`,{className:`about-stat__value`,children:[y(e,1400,r),t]}),(0,f.jsx)(`span`,{className:`about-stat__label`,children:n})]})}function ee(){let[e,t]=v({threshold:.15});return(0,f.jsxs)(`section`,{id:`about`,ref:e,className:`section section--alt reveal${t?` revealed`:``}`,children:[(0,f.jsx)(`div`,{className:`container`,children:(0,f.jsxs)(`div`,{className:`about-grid`,children:[(0,f.jsxs)(`div`,{className:`about-main stagger-1`,children:[(0,f.jsx)(`span`,{className:`label`,children:`About`}),(0,f.jsxs)(`h2`,{className:`section-title`,style:{marginBottom:`24px`},children:[`Driven.`,(0,f.jsx)(`br`,{}),(0,f.jsx)(`span`,{style:{color:`var(--accent)`},children:`Proven.`})]}),(0,f.jsx)(`p`,{className:`about-body`,children:`I'm a Cum Laude Exercise Science graduate (3.72 GPA). I was scouted in South Africa by Gulf United FC — I relocated to Barbourville, Kentucky, earned First Team soccer honours at Union Commonwealth University and made the Dean's List twice, all while working and studying.`}),(0,f.jsx)(`p`,{className:`about-body`,style:{marginTop:`18px`},children:`I'm currently based in Barbourville, KY and available immediately. I bring competitive discipline, leadership and genuine hustle to every environment I'm part of.`}),(0,f.jsx)(`div`,{className:`about-tags`,children:[`Competitive`,`Fast Learner`,`Reliable`,`Team Player`,`Good Leader`,`Adaptable`].map(e=>(0,f.jsx)(`span`,{className:`tag`,children:e},e))})]}),(0,f.jsx)(`div`,{className:`about-stats stagger-2`,children:b.map(e=>(0,f.jsx)(x,{...e,active:t},e.label))})]})}),(0,f.jsx)(`style`,{children:`
+      `})]})}function v(e={}){let t=(0,l.useRef)(null),[n,r]=(0,l.useState)(!1);return(0,l.useEffect)(()=>{let n=t.current;if(!n)return;let i=new IntersectionObserver(([e])=>{e.isIntersecting&&(r(!0),i.disconnect())},{threshold:e.threshold??.15,rootMargin:e.rootMargin??`0px`});return i.observe(n),()=>i.disconnect()},[]),[t,n]}function y(e,t=1200,n=!1){let[r,i]=(0,l.useState)(0);return(0,l.useEffect)(()=>{if(!n)return;let r=null,a=n=>{r||=n;let o=Math.min((n-r)/t,1),s=1-(1-o)**3;i(Math.floor(s*e)),o<1?requestAnimationFrame(a):i(e)};requestAnimationFrame(a)},[n,e,t]),r}var b=[{value:3,suffix:`.72`,label:`GPA · Cum Laude`},{value:2,suffix:``,label:`Degrees Earned`},{value:2,suffix:`×`,label:`Dean's List`},{value:8,suffix:`+`,label:`Roles`}];function x({value:e,suffix:t,label:n,active:r}){return(0,f.jsxs)(`div`,{className:`about-stat`,children:[(0,f.jsxs)(`span`,{className:`about-stat__value`,children:[y(e,1400,r),t]}),(0,f.jsx)(`span`,{className:`about-stat__label`,children:n})]})}function ee(){let[e,t]=v({threshold:.15});return(0,f.jsxs)(`section`,{id:`about`,ref:e,className:`section section--alt reveal${t?` revealed`:``}`,children:[(0,f.jsx)(`div`,{className:`container`,children:(0,f.jsxs)(`div`,{className:`about-grid`,children:[(0,f.jsxs)(`div`,{className:`about-main stagger-1`,children:[(0,f.jsx)(`span`,{className:`label`,children:`About`}),(0,f.jsxs)(`h2`,{className:`section-title`,style:{marginBottom:`24px`},children:[`Driven.`,(0,f.jsx)(`br`,{}),(0,f.jsx)(`span`,{style:{color:`var(--accent)`},children:`Proven.`})]}),(0,f.jsx)(`p`,{className:`about-body`,children:`I'm a Cum Laude Exercise Science graduate (3.72 GPA). I was scouted in South Africa by Gulf United FC — I relocated to Barbourville, Kentucky, earned First Team soccer honours at Union Commonwealth University and made the Dean's List twice, all while working and studying.`}),(0,f.jsxs)(`div`,{className:`about-highlight`,children:[(0,f.jsx)(`p`,{style:{margin:0,fontSize:`13px`,fontWeight:`600`,color:`var(--accent)`,marginBottom:`8px`,letterSpacing:`0.05em`,textTransform:`uppercase`},children:`Graduate Assistant`}),(0,f.jsx)(`p`,{className:`about-body`,style:{marginTop:0,fontSize:`14px`,lineHeight:`1.7`,color:`var(--mid)`},children:`A Graduate Assistant (GA) is a graduate student who is employed by their university in a dual role: pursuing an advanced degree while simultaneously working part-time for a specific academic department or administrative office.`})]}),(0,f.jsx)(`p`,{className:`about-body`,style:{marginTop:`18px`},children:`I'm currently based in Barbourville, KY and available immediately. I bring competitive discipline, leadership and genuine hustle to every environment I'm part of.`}),(0,f.jsx)(`div`,{className:`about-tags`,children:[`Competitive`,`Fast Learner`,`Reliable`,`Team Player`,`Good Leader`,`Adaptable`].map(e=>(0,f.jsx)(`span`,{className:`tag`,children:e},e))})]}),(0,f.jsx)(`div`,{className:`about-stats stagger-2`,children:b.map(e=>(0,f.jsx)(x,{...e,active:t},e.label))})]})}),(0,f.jsx)(`style`,{children:`
         .about-grid {
           display: grid; grid-template-columns: 1fr 280px;
           gap: 80px; align-items: start;
@@ -255,6 +302,13 @@ Error generating stack: `+e.message+`
           font-family: 'Space Mono', monospace;
           font-size: 9px; color: var(--dim);
           letter-spacing: 0.15em; text-transform: uppercase; line-height: 1.4;
+        }
+        .about-highlight {
+          background: rgba(0, 255, 135, 0.05);
+          border-left: 3px solid var(--accent);
+          padding: 20px;
+          margin: 20px 0;
+          border-radius: 4px;
         }
         @media (max-width: 860px) {
           .about-grid { grid-template-columns: 1fr; gap: 40px; }
